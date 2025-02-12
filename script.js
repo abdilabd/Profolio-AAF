@@ -38,3 +38,18 @@ function eraseText(){
     }
 }
 window.onload = typeWriter
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop - 50, // Décalage de 50px pour ne pas coller au haut de l'écran
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
