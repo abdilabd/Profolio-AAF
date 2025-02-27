@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <title>A-FARAH Portfolio</title>
 </head>
 <body>
@@ -17,8 +18,8 @@
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#home">ACCEUIL</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#competences">COMPETENCES</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">EXPERIENCES</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">PROJETS</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#parcours">EXPERIENCES</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="./projets.html">PROJETS</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">CONTACT</a></div>
         </div>
         <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
@@ -27,8 +28,8 @@
             <div class="links">
                 <a href="#home">ACCEUIL</a>
                 <a href="#competences">COMPETENCES</a>
-                <a href="#">EXPERIENCES</a>
-                <a href="#">PROJET REALISER</a>
+                <a href="#parcours">EXPERIENCES</a>
+                <a href="./projets.html">PROJET REALISER</a>
                 <a href="#contact">CONTACT</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
@@ -37,7 +38,7 @@
     <section id="home">
         <div class="main-container">
             <div class="image" data-aos="zoom-out" data-aos-duration="3000">
-                <img src="PP.jpg" alt="">
+                <img src="images/PP.jpg" alt="">
             </div>
             <div class="content">
                 <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Bonjour, je m'appelle <span>FARAH</span></h1>
@@ -89,11 +90,153 @@
                 <p>Création de cartes 2D, 3D, interactives et visualisation spatiale avec Leaflet, Mapbox et d'autres outils SIG.</p>
             </div>  
         </div>
-    </section>
+    </section> 
+    <section id="parcours">
+        <h2 data-aos="fade-down" data-aos-duration="1500">Mon Parcours Académique</h2>
+        <div class="timeline">
+            <!-- Bac -->
+            <div class="timeline-item">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-content">
+                    <h3>Baccalauréat</h3>
+                    <p class="description">Obtention du Bac</p>
+                </div>
+            </div>
+    
+            <!-- DUT SIG -->
+            <div class="timeline-item">
+                <div class="timeline-date">2020-2021</div>
+                <div class="timeline-content">
+                    <h3>DUT SIG - Université de Djibouti</h3>
+                    <p class="description">Formation en SIG appliqué à l’aménagement territorial</p>
+                </div>
+            </div>
+    
+            <!-- Stage 2021 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h3>Stage SIG - 2021</h3>
+                    <p class="description">Expérience en cartographie et géomatique</p>
+                </div>
+            </div>
+    
+            <!-- Licence SIG -->
+            <div class="timeline-item">
+                <div class="timeline-date">2021-2022</div>
+                <div class="timeline-content">
+                    <h3>Licence SIG - Université de Djibouti</h3>
+                    <p class="description">Spécialisation en Systèmes d’Information Géographique</p>
+                </div>
+            </div>
+    
+            <!-- Stage 2022 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2022</div>
+                <div class="timeline-content">
+                    <h3>Stage SIG - 2022</h3>
+                    <p class="description">Analyse spatiale et cartographie avancée</p>
+                </div>
+            </div>
+    
+            <!-- Licence Informatique -->
+            <div class="timeline-item">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">
+                    <h3>Licence Informatique - Académie Arabe de Djibouti</h3>
+                    <p class="description">Développement web et SIG</p>
+                </div>
+            </div>
+    
+            <!-- Master 1 GEAD -->
+            <div class="timeline-item">
+                <div class="timeline-date">2023-2024</div>
+                <div class="timeline-content">
+                    <h3>Master 1 GEAD - Université de Rouen</h3>
+                    <p class="description">Géomatique, aménagement et développement</p>
+                </div>
+            </div>
+    
+            <!-- Stage 2024 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2024</div>
+                <div class="timeline-content">
+                    <h3>Stage en Géomatique - 2024</h3>
+                    <p class="description">Analyse SIG et télédétection</p>
+                </div>
+            </div>
+    
+            <!-- Master 2 GEAD -->
+            <div class="timeline-item">
+                <div class="timeline-date">2024-2025</div>
+                <div class="timeline-content">
+                    <h3>Master 2 GEAD - Université de Rouen</h3>
+                    <p class="description">Spécialisation en géomatique avancée</p>
+                </div>
+            </div>
+    
+            <!-- Stage 2025 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2025</div>
+                <div class="timeline-content">
+                    <h3>Stage de Master 2 - 2025</h3>
+                    <p class="description">Projet de fin d’études en SIG</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+<section id="parcours">
+    <h2 data-aos="fade-down" data-aos-duration="1500">Mon Parcours Académique</h2>
+    <div class="timeline-container">
+        <div class="timeline">
+            <div class="timeline-item" data-title="Baccalauréat">
+                <span class="timeline-dot"></span>
+                <div class="description">Obtention du Bac</div>
+            </div>
+            <div class="timeline-item" data-title="DUT SIG - Université de Djibouti">
+                <span class="timeline-dot"></span>
+                <div class="description">Formation en SIG appliqué à l’aménagement territorial</div>
+            </div>
+            <div class="timeline-item" data-title="Stage SIG - 2021">
+                <span class="timeline-dot"></span>
+                <div class="description">Expérience en cartographie et géomatique</div>
+            </div>
+            <div class="timeline-item" data-title="Licence SIG - Université de Djibouti">
+                <span class="timeline-dot"></span>
+                <div class="description">Spécialisation en Systèmes d’Information Géographique</div>
+            </div>
+            <div class="timeline-item" data-title="Stage SIG - 2022">
+                <span class="timeline-dot"></span>
+                <div class="description">Analyse spatiale et cartographie avancée</div>
+            </div>
+            <div class="timeline-item" data-title="Licence Informatique - Académie Arabe de Djibouti">
+                <span class="timeline-dot"></span>
+                <div class="description">Développement web et SIG</div>
+            </div>
+            <div class="timeline-item" data-title="Master 1 GEAD - Université de Rouen">
+                <span class="timeline-dot"></span>
+                <div class="description">Géomatique, aménagement et développement</div>
+            </div>
+            <div class="timeline-item" data-title="Stage en Géomatique - 2024">
+                <span class="timeline-dot"></span>
+                <div class="description">Analyse SIG et télédétection</div>
+            </div>
+            <div class="timeline-item" data-title="Master 2 GEAD - Université de Rouen">
+                <span class="timeline-dot"></span>
+                <div class="description">Spécialisation en géomatique avancée</div>
+            </div>
+            <div class="timeline-item" data-title="Stage de Master 2 - 2025">
+                <span class="timeline-dot"></span>
+                <div class="description">Projet de fin d’études en SIG</div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <section id="contact">
         <h2 data-aos="fade-down" data-aos-duration="1500">Contactez-moi</h2>
         <div class="contact-card" data-aos="zoom-in" data-aos-duration="1500">
-            <img src="PP.jpg" alt="Photo de Abdourazak FARAH">
+            <img src="images/PP.jpg" alt="Photo de Abdourazak FARAH">
             <h3>Abdourazak FARAH</h3>
             <p>Géomaticien | Développeur SIG</p>
             <div class="contact-info">
@@ -112,6 +255,6 @@
     <script>
       AOS.init({offset:0});
     </script>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets</title>
+    <link rel="stylesheet" href="projets.css">
+</head>
+<body>
+        <!-- Barre de navigation -->
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    Abdourazak <span>FARAH</span>
+                </div>
+                <div class="links">
+                    <div class="link"><a href="index.html#home">ACCEUIL</a></div>
+                    <div class="link"><a href="index.html#competences">COMPETENCES</a></div>
+                    <div class="link"><a href="index.html#parcours">EXPERIENCES</a></div>
+                    <div class="link"><a href="projets.html">PROJETS</a></div>
+                    <div class="link"><a href="index.html#contact">CONTACT</a></div>
+                </div>
+                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+            </div>
+        </nav>
+
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        <div class="projets-container">
+            <!-- Liste des projets -->
+            <div class="projets-list">
+                <button onclick="showProject(1)">Projet SIG Urbain</button>
+                <button onclick="showProject(2)">Cartographie 3D</button>
+                <button onclick="showProject(3)">Analyse de Données SIG</button>
+                <button onclick="showProject(4)">Web Mapping</button>
+                <button onclick="showProject(5)">Base de Données Géospatiales</button>
+            </div>
+
+            <!-- Détails du projet affiché -->
+            <div class="projet-detail">
+                <div id="projet1" class="projet-content">
+                    <h3>Projet SIG Urbain</h3>
+                    <p class="objectif">Objectif : Étudier l’impact de l’urbanisation.</p>
+                    <p class="methodologie">Méthodologie : Collecte de données SIG et analyse spatiale.</p>
+                    <video controls>
+                        <source src="videos/VID-20241215-WA0002.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                    <p class="resultat">Résultat : Cartographie précise des changements urbains.</p>
+                </div>
+
+                <div id="projet2" class="projet-content slider">
+                    <h3>Cartographie 3D</h3>
+                    <p class="objectif">Objectif : Visualiser les terrains en 3D.</p>
+                    <p class="methodologie">Méthodologie : Modélisation SIG et traitement d’image.</p>
+                    <div class="slider-container">
+                        <button class="prev" onclick="changeSlide(-1, 'cartographie')">&#10094;</button>
+                        <img id="cartographie-img" src="images/projet2.jpg" alt="Cartographie 3D" onclick="openLightbox(this)">
+                        <button class="next" onclick="changeSlide(1, 'cartographie')">&#10095;</button>
+                    </div>
+                    <p class="resultat">Résultat : Génération de modèles 3D interactifs.</p>
+                </div>
+
+                <div id="projet3" class="projet-content slider">
+                    <h3>Analyse de Données SIG</h3>
+                    <p class="objectif">Objectif : Identifier les tendances spatiales.</p>
+                    <p class="methodologie">Méthodologie : Traitement de données avec Python.</p>
+                    <div class="slider-container">
+                        <button class="prev" onclick="changeSlide(-1, 'sig')">&#10094;</button>
+                        <img id="sig-img" src="images/projet1.jpg" alt="Analyse SIG" onclick="openLightbox(this)">
+                        <button class="next" onclick="changeSlide(1, 'sig')">&#10095;</button>
+                    </div>
+                    <p class="resultat">Résultat : Cartes thématiques détaillées.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img">
+    </div>
+
+    <script src="projets.js"></script>
+</body>
+</html>
