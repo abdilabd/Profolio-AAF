@@ -42,7 +42,7 @@ nav {
 }
 .logo span{
     color: #077b32;
-    text-shadow: 0 0 10px #077b32;
+    text-shadow: 0 0 10px #015b25;
 }
 .hamburg,
 .cancel{
@@ -73,14 +73,14 @@ nav {
     left: 0;
     width: 0%;
     height: 3px;
-    background-color: #077b32;
+    background-color: #071a7b;
     transition: 0.2s linear;
 }
 .nav-container .links a:hover::before{
     width: 100%;
 }
 .nav-container .links a:hover{
-    color: #077b32;
+    color: #070f7b;
 }
 .dropdown{
     z-index: 100;
@@ -103,7 +103,7 @@ nav {
     transition: 0.2s linear;
 }
 .dropdown .links a:hover{
-    background-color: #077b32;
+    background-color: #07167b;
 }
 section{
     width: 100%;
@@ -121,7 +121,7 @@ section{
     height: 400px;
     border-radius: 100%;
     overflow: hidden;
-    box-shadow: 0 0 50px #077b32;
+    box-shadow: 0 0 50px #070b7b;
 }
 .main-container .image img{
     width: 100%;
@@ -149,16 +149,16 @@ section{
     font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
 }
 .content h1 span{
-    color: #077b32;
-    text-shadow: 0  0 10px #077b32;
+    color: #13077b;
+    text-shadow: 0  0 10px #07227b;
 }
 .content .typewriter{
     font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
     font-weight: 600;
 }
 .content .typewriter-text{
-    color: #077b32;
-    text-shadow: 0 0 10px #077b32;
+    color: #07137b;
+    text-shadow: 0 0 10px #1a077b;
 }
 .content p{
     font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
@@ -171,9 +171,9 @@ section{
     width: 3rem;
     height: 3rem;
     background-color: transparent;
-    border: 0.2rem solid #077b32;
+    border: 0.2rem solid #07287b;
     border-radius: 50%;
-    color: #077b32;
+    color: #0f077b;
     margin: 5px 15px;
     font-size: 1.5rem;
     transition: 0.2s linear;
@@ -181,14 +181,14 @@ section{
 .social-links i:hover{
     scale: 1.3;
     color: black;
-    background-color: #077b32;
-    filter: drop-shadow(0 0 10px #077b32);
+    background-color: #0b077b;
+    filter: drop-shadow(0 0 10px #1c077b);
 }
 .content button{
     width: 50%;
     height: 6vh;
     margin: 30px;
-    background-color: #077b32;
+    background-color: #09077b;
     color: white;
     border: none;
     outline: none;
@@ -199,11 +199,11 @@ section{
 }
 .content button:hover{
     scale: 1.1;
-    color: #077b32;
-    border: 2px solid #077b32;
+    color: #07137b;
+    border: 2px solid #22077b;
     background-color: transparent;
     font-weight: 700;
-    box-shadow: 0 0 40px #077b32;
+    box-shadow: 0 0 40px #22077b;
 }
 @media (max-width:884px) {
     nav .logo{
@@ -260,7 +260,7 @@ section{
 #competences h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #077b32;
+    text-shadow: 0 0 10px #071a7b;
 }
 
 .competences-container {
@@ -274,17 +274,17 @@ section{
     padding: 20px;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
-    box-shadow: 0 0 15px rgba(0, 255, 100, 0.3);
+    box-shadow: 0 0 15px rgba(0, 26, 255, 0.3);
 }
 
 .competence:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 255, 100, 0.6);
+    box-shadow: 0 0 30px rgba(51, 0, 255, 0.6);
 }
 
 .competence i {
     font-size: 2.5rem;
-    color: #077b32;
+    color: #071a7b;
     margin-bottom: 10px;
 }
 
@@ -319,7 +319,7 @@ section{
 #contact h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #077b32;
+    text-shadow: 0 0 10px #071a7b;
 }
 
 .contact-card {
@@ -328,7 +328,7 @@ section{
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 255, 100, 0.3);
+    box-shadow: 0 0 15px rgba(4, 0, 255, 0.3);
     text-align: center;
 }
 
@@ -337,12 +337,12 @@ section{
     height: 120px;
     border-radius: 50%;
     margin-bottom: 10px;
-    border: 3px solid #077b32;
+    border: 3px solid #071a7b;
 }
 
 .contact-card h3 {
     font-size: 1.8rem;
-    color: #077b32;
+    color: #071a7b;
 }
 
 .contact-card p {
@@ -359,7 +359,7 @@ section{
 }
 
 .contact-info i {
-    color: #077b32;
+    color: #071a7b;
     margin-right: 10px;
     font-size: 1.5rem;
 }
@@ -372,13 +372,13 @@ section{
     display: inline-block;
     margin: 0 10px;
     font-size: 1.8rem;
-    color: #077b32;
+    color: #071a7b;
     transition: 0.3s;
 }
 
 .social-links a:hover {
     color: white;
-    text-shadow: 0 0 10px #077b32;
+    text-shadow: 0 0 10px #071a7b;
 }
 
 /* Responsive Design */
@@ -397,7 +397,7 @@ section{
 #projets h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #077b32;
+    text-shadow: 0 0 10px #071a7b;
 }
 
 .projets-container {
@@ -410,7 +410,7 @@ section{
     width: 30%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .projet {
@@ -451,7 +451,7 @@ section{
 
 .projet-detail h3 {
     font-size: 1.5rem;
-    color: #077b32;
+    color: #071a7b;
 }
 
 .projet-detail img {
@@ -485,7 +485,7 @@ section{
 }
 
 .projets-list::-webkit-scrollbar-thumb {
-    background: #077b32;
+    background: #071a7b;
     border-radius: 5px;
 }
 
@@ -494,7 +494,7 @@ section{
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 255, 100, 0.3);
+    box-shadow: 0 0 15px rgba(0, 55, 255, 0.3);
     transition: 0.3s ease-in-out;
     height: 500px; /* Ajuste la hauteur pour s'aligner avec la liste */
     overflow: hidden;
@@ -526,7 +526,7 @@ section{
     
     .projets-list {
         width: 100%;
-        max-height: 300px; /* Réduit la hauteur pour petits écrans */
+        max-height: 250px; /* Réduit la hauteur pour petits écrans */
     }
 
     .projet-detail {

@@ -38,7 +38,7 @@ nav {
 }
 
 .logo span {
-    color: #077b32;
+    color: #037b07;
     text-shadow: 0 0 10px #077b32;
 }
 
@@ -55,7 +55,7 @@ nav {
 }
 
 .links .link a:hover {
-    color: #077b32;
+    color: #15077b;
 }
 
 /* ✅ Évite que le contenu soit caché sous la barre */
@@ -68,7 +68,7 @@ h2 {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #077b32;
+    text-shadow: 0 0 10px #1c077b;
 }
 
 /* ✅ CONTAINER PRINCIPAL : Ajustement optimal */
@@ -90,11 +90,11 @@ h2 {
     max-height: 80vh; /* Ajuste la hauteur selon ton besoin */
     overflow-y: auto; /* ✅ Scroll vertical */
     overflow-x: hidden; /* ✅ Bloque le scroll horizontal */
-    padding-right: 10px;
-    padding-left: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    padding-right: 0px;
+    padding-left: 0px;
+    background: rgba(7, 35, 149, 0.1);
     border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 255, 100, 0.3);
+    box-shadow: 0 0 15px rgba(25, 14, 234, 0.3);
     position: relative;
     left: -35px;
 }
@@ -115,7 +115,7 @@ button {
 }
 
 button:hover {
-    background: #077b32;
+    background: #2e077b;
 }
 
 
@@ -128,7 +128,7 @@ button:hover {
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 255, 100, 0.3);
+    box-shadow: 0 0 15px rgba(25, 0, 255, 0.3);
     position: relative;
     top: -40px;  /* Remonte ces deux sections */
     padding-bottom: 80px; /* Ajoute un espace en bas */
@@ -191,6 +191,33 @@ button:hover {
 .next { right: 10px; } /* ✅ Positionne bien la flèche droite */
 
 .next { right: 5px; } /* ✅ Ajuste bien à droite */
+
+/* ✅ Barre de défilement pour les sections avec scroll */
+.projet-detail::-webkit-scrollbar,
+.projets-list::-webkit-scrollbar {
+    width: 8px; /* ✅ Rend la barre fine */
+}
+
+/* ✅ Style du fond de la barre */
+.projet-detail::-webkit-scrollbar-track,
+.projets-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+}
+
+/* ✅ Style du curseur de défilement */
+.projet-detail::-webkit-scrollbar-thumb,
+.projets-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #03077b, #f7f7f7);
+    border-radius: 10px;
+}
+
+/* ✅ Effet au survol */
+.projet-detail::-webkit-scrollbar-thumb:hover,
+.projets-list::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #1512bc, #f0f4f2);
+}
+
 
 /* ✅ MEDIA QUERIES POUR RESPONSIVE */
 @media (max-width: 900px) {
