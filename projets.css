@@ -132,7 +132,15 @@ button:hover {
     position: relative;
     top: -40px;  /* Remonte ces deux sections */
     padding-bottom: 80px; /* Ajoute un espace en bas */
+    text-align: justify; /* ✅ Justifie le texte */
 }
+.projet-detail h3,
+.projet-detail a {
+    text-align: center; /* ✅ Centre le texte */
+    display: block; /* ✅ Permet à text-align de fonctionner sur <a> */
+    margin: 10px auto; /* ✅ Centre horizontalement avec un petit espace */
+}
+
 /* ✅ SLIDER ET VIDÉO CENTRÉS */
 .slider-container, .projet-content video {
     width: 100%;
