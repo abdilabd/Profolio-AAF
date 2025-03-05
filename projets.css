@@ -1,4 +1,4 @@
-/* 🌙 Style général */
+/* Style général */
 body {
     background-color: black;
     color: white;
@@ -9,7 +9,7 @@ body {
     overflow: hidden; /* ✅ Supprime le défilement vertical */
 }
 
-/* ✅ BARRE DE NAVIGATION */
+/*  BARRE DE NAVIGATION */
 nav {
     width: 100%;
     height: 10vh;
@@ -21,7 +21,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10%;
+    padding: 0 8%;
 }
 
 .nav-container {
@@ -58,14 +58,14 @@ nav {
     color: #15077b;
 }
 
-/* ✅ Évite que le contenu soit caché sous la barre */
+/*  Évite que le contenu soit caché sous la barre */
 body {
     padding-top: 12vh;
 }
 
 /* ✅ TITRE PRINCIPAL */
 h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
     margin-bottom: 20px;
     text-shadow: 0 0 10px #1c077b;
@@ -80,7 +80,7 @@ h2 {
     max-width: 1200px;
     height: 80vh; /* ✅ Fixe la hauteur pour éviter les espaces vides */
     margin: auto;
-    padding: 50px 0;
+    padding: 30px 0;
     gap: 20px; /* ✅ Évite un grand espace entre la liste et le détail */
 }
 
@@ -103,8 +103,8 @@ h2 {
 
 /* ✅ BOUTONS DE LA LISTE */
 button {
-    padding: 10px;
-    font-size: 16px;
+    padding: 15px;
+    font-size: 18px;
     cursor: pointer;
     background: #444;
     color: white;
