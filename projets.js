@@ -1,6 +1,6 @@
 let slides = {
     cartographie: ["images/image0.png"],
-    sig: ["images/image7.png", "images/image23.png", "images/image26.jpg"]
+    sig: ["images/image7.png", "images/image23.png", "images/image26.jpg","images/Image1.png"]
 };
 
 let slideIndex = { cartographie: 0, sig: 0 };
