@@ -30,7 +30,7 @@
             <!-- Liste des projets -->
             <div class="projets-list">
                 <button onclick="showProject(1)">Datathon Normandie 2024</button>
-                <button onclick="showProject(2)">SIG & Gestion des titre foncier</button>
+                <button onclick="showProject(2)">Webmapping</button>
                 <button onclick="showProject(3)">Analyse de Données SIG</button>
                 <button onclick="showProject(4)">Eco-Quartie à Angers</button>
                 <button onclick="showProject(5)">Analyse spatio-temporelle</button>
@@ -62,24 +62,30 @@
                 </div>
 
                 <div id="projet2" class="projet-content slider">
-                    <h3>Cartographie 3D</h3>
-                    <p class="objectif">Objectif : Visualiser les terrains en 3D.</p>
-                    <p class="methodologie">Méthodologie : Modélisation SIG et traitement d’image.</p>
+                    <h3>Carte interactive de la densité de la métropole de Rouen (2022)</h3>
+                    <p class="objectif">L'objectif de ce projet était de créer une carte interactive visualisant la densité de population au sein de la métropole 
+                    de Rouen pour l'année 2022. Cette carte permet de mieux comprendre la répartition des habitants sur le territoire, 
+                    en mettant en évidence les zones à forte densité et celles plus faiblement peuplées.</p>
+                    <p><a href="https://abdilabd.github.io/Webmapping/">Pour voir le site: clique-ici</a></p>
                     <div class="slider-container">
                         <button class="prev" onclick="changeSlide(-1, 'cartographie')">&#10094;</button>
-                        <img id="cartographie-img" src="images/projet2.jpg" alt="Cartographie 3D" onclick="openLightbox(this)">
+                        <img id="cartographie-img" src="images/image0.png" alt="Cartographie 3D" onclick="openLightbox(this)">
                         <button class="next" onclick="changeSlide(1, 'cartographie')">&#10095;</button>
                     </div>
-                    <p class="resultat">Résultat : Génération de modèles 3D interactifs.</p>
+                    <p class="methodologie">Pour ce projet, j'ai utilisé Leaflet pour la cartographie interactive, en combinant HTML, CSS et JavaScript pour 
+                    structurer, styliser et ajouter des fonctionnalités interactives à la carte. J'ai également travaillé avec des données géospatiales pour assurer la précision 
+                    et la pertinence des informations affichées.</p>
                 </div>
 
                 <div id="projet3" class="projet-content slider">
-                    <h3>Analyse de Données SIG</h3>
-                    <p class="objectif">Objectif : Identifier les tendances spatiales.</p>
+                    <h3>Évaluation d’un modèle climatique par une approche géospatiale.</h3>
+                    <p class="objectif">L’objectif principal de cette étude est d'analyser la performance du modèle climatique CLMNCC pour simuler les précipitations
+                    à Djibouti, en comparant les simulations aux données d'observation. Cette analyse est essentielle pour comprendre les dynamiques climatiques 
+                    et leur impact sur des régions vulnérables comme Djibouti. En outre, ce projet vise à évaluer la capacité du modèle à reproduire le climat passé et actuel de Djibouti en termes de précipitations</p>
                     <p class="methodologie">Méthodologie : Traitement de données avec Python.</p>
                     <div class="slider-container">
                         <button class="prev" onclick="changeSlide(-1, 'sig')">&#10094;</button>
-                        <img id="sig-img" src="images/projet1.jpg" alt="Analyse SIG" onclick="openLightbox(this)">
+                        <img id="sig-img" src="images/Image1.png" alt="Analyse SIG" onclick="openLightbox(this)">
                         <button class="next" onclick="changeSlide(1, 'sig')">&#10095;</button>
                     </div>
                     <p class="resultat">Résultat : Cartes thématiques détaillées.</p>
