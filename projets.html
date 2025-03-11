@@ -32,7 +32,7 @@
                 <button onclick="showProject(1)">Datathon Normandie 2024</button>
                 <button onclick="showProject(2)">Webmapping</button>
                 <button onclick="showProject(3)">Analyse de Données SIG</button>
-                <button onclick="showProject(4)">Eco-Quartie à Angers</button>
+                <button onclick="showProject(4)">Aménagement urbain durable</button>
                 <button onclick="showProject(5)">Analyse spatio-temporelle</button>
                 <button onclick="showProject(6)">Amenagement</button>
                 <button onclick="showProject(7)">la mangrove</button>
@@ -47,7 +47,7 @@
                          solution numérique innovante en un mois. L'objectif était de manipuler, analyser et valoriser 
                          des données open data liées au patrimoine et au tourisme, tout en ayant un impact positif sur le 
                          territoire normand et sa population.</p>
-                    <p><a href="https://kaizer1er.github.io/Datathon/">Pour voir le site: clique-ici</a></p>
+                         <a href="https://kaizer1er.github.io/Datathon/" class="btn" target="_blank">Voir le site</a>
                     <video controls>
                         <source src="videos/VID-20241215-WA0002.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas la lecture de vidéos.
@@ -66,7 +66,7 @@
                     <p class="objectif">L'objectif de ce projet était de créer une carte interactive visualisant la densité de population au sein de la métropole 
                     de Rouen pour l'année 2022. Cette carte permet de mieux comprendre la répartition des habitants sur le territoire, 
                     en mettant en évidence les zones à forte densité et celles plus faiblement peuplées.</p>
-                    <p><a href="https://abdilabd.github.io/Webmapping/">Pour voir le site: clique-ici</a></p>
+                    <a href="https://abdilabd.github.io/Webmapping/" class="btn" target="_blank">Voir le site</a>
                     <div class="slider-container">
                         <button class="prev" onclick="changeSlide(-1, 'cartographie')">&#10094;</button>
                         <img id="cartographie-img" src="images/image0.png" alt="Cartographie 3D" onclick="openLightbox(this)">
@@ -88,8 +88,31 @@
                         <img id="sig-img" src="images/Image1.png" alt="Analyse SIG" onclick="openLightbox(this)">
                         <button class="next" onclick="changeSlide(1, 'sig')">&#10095;</button>
                     </div>
-                    <p class="resultat">Résultat : Cartes thématiques détaillées.</p>
+                    
                 </div>
+                <div id="projet4" class="projet-content slider">
+                    <h3>Projet d'aménagement urbain durable</h3>
+                    <h4>Projet n°1 : Conception d'un éco-quartier à Angers, France</h4>
+                    <p class="objectif">Dans le cadre de ma formation en géomatique appliquée à la dynamique territoriale, 
+                    j'ai réalisé un projet académique en groupe qui consistait à la mise en place d'un éco-quartier à Angers, en France. 
+                    Nous avons utilisé des documents urbains existants pour élaborer une proposition qui respecte les principes du développement durable.</p>
+                    <div class="slider-container">
+                    <button class="prev" onclick="changeSlide(-1, 'amenagement')">&#10094;</button>
+                    <img id="amenagement-img" src="images/image30.png" alt="Amenagement durable" onclick="openLightbox(this)">
+                    <button class="next" onclick="changeSlide(1, 'amenagement')">&#10095;</button>
+                    </div>
+                    
+                    <p><h4>Projet n°2 : Création d'un parc urbain à Abidjan, Côte d'Ivoire</h4></p>
+                    <p class="objectif">Ce projet porte sur la création d'un parc urbain dans une zone sensible d'Abidjan. Dans ce projet, nous avons également 
+                    utilisé des documents urbains pour proposer un plan d'aménagement visant à limiter l'étalement urbain et à réduire les risques d'inondation. 
+                    J'ai prispart à l'analyse géospatiale des zones à risque et à la mise en place d'un aménagement paysager adapté pour préserver les écosystèmes locaux.</p>
+                        <div class="slider-container">
+                        <button class="prev" onclick="changeSlide(-1, 'amenagement1')">&#10094;</button>
+                        <img id="amenagement1-img" src="images/image33.png" alt="Amenagement durable1" onclick="openLightbox(this)">
+                        <button class="next" onclick="changeSlide(1, 'amenagement1')">&#10095;</button>
+                        </div>
+                </div>
+            </div>
             </div>
         </div>
     </section>

@@ -225,6 +225,25 @@ button:hover {
 .projets-list::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(45deg, #1512bc, #f0f4f2);
 }
+.btn {
+    display: inline-block;
+    padding: 8px 15px; /* Réduction du padding pour un bouton moins large */
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    width: fit-content; /* Ajuste la largeur au contenu du bouton */
+    min-width: 120px; /* Fixe une largeur minimale pour éviter un bouton trop petit */
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
 
 
 /* ✅ MEDIA QUERIES POUR RESPONSIVE */
