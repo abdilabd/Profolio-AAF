@@ -2,10 +2,11 @@ let slides = {
     cartographie: ["images/image0.png"],
     sig: ["images/image24.png","images/image25.png","images/image7.png", "images/image23.png", "images/image36.png","images/Image1.png"],
     amenagement:["images/image30.png","images/image31.png","images/image32.png","images/image27.png"],
-    amenagement1:["images/image33.png","images/image34.png","images/image5.png","images/image35.png"]
+    amenagement1:["images/image33.png","images/image34.png","images/image5.png","images/image35.png"],
+    arc:["images/Image2.png","images/Image3.png","images/Image4.png","images/image12.png","images/image9.png","images/image11.png","images/image6.png","images/image21.jpg","images/image29.jpg"]
 };
 
-let slideIndex = { cartographie: 0, sig: 0, amenagement: 0, amenagement1 :0 };
+let slideIndex = { cartographie: 0, sig: 0, amenagement: 0, amenagement1 :0, arc :0 };
 
 // Masquer tous les projets au début
 document.addEventListener("DOMContentLoaded", function() {
