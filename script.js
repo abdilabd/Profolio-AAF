@@ -58,3 +58,18 @@ document.querySelectorAll('nav a').forEach(anchor => {
         // Sinon, laisser la navigation normale se faire (ex: projets.html)
     });
 });
+
+function showStage(index) {
+    let contents = document.querySelectorAll(".tab-content");
+    let buttons = document.querySelectorAll(".tab-button");
+
+    // Cacher tous les contenus
+    contents.forEach(content => content.classList.remove("active"));
+
+    // Désactiver tous les boutons
+    buttons.forEach(button => button.classList.remove("active"));
+
+    // Afficher le bon contenu et activer le bouton correspondant
+    contents[index].classList.add("active");
+    buttons[index].classList.add("active");
+}

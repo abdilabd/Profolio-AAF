@@ -518,6 +518,57 @@ section{
     background: rgba(255, 255, 255, 0.2);
 }
 
+/* Cibler uniquement la section "Parcours" */
+#parcours {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#parcours h2 {
+    color: #333;
+}
+
+/* Styliser les boutons d'onglets uniquement pour #parcours */
+#parcours .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#parcours .tab-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#parcours .tab-button:hover {
+    background: #0056b3;
+}
+
+#parcours .tab-button.active {
+    background: #0056b3;
+}
+
+/* Cacher les contenus sauf celui actif */
+#parcours .tab-content {
+    display: none;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#parcours .tab-content.active {
+    display: block;
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
     .projets-container {

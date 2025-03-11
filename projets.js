@@ -1,6 +1,6 @@
 let slides = {
     cartographie: ["images/image0.png"],
-    sig: ["images/image24.png","images/image25.png","images/image7.png", "images/image23.png", "images/image36.jpg","images/Image1.png"],
+    sig: ["images/image24.png","images/image25.png","images/image7.png", "images/image23.png", "images/image36.png","images/Image1.png"],
     amenagement:["images/image30.png","images/image31.png","images/image32.png","images/image27.png"],
     amenagement1:["images/image33.png","images/image34.png","images/image5.png","images/image35.png"]
 };
