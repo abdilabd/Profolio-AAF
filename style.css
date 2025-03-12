@@ -41,8 +41,8 @@ nav {
     font-weight: bold;
 }
 .logo span{
-    color: #077b32;
-    text-shadow: 0 0 10px #015b25;
+    color: #071a7b;
+    text-shadow: 0 0 10px #071a7b;
 }
 .hamburg,
 .cancel{
@@ -518,18 +518,24 @@ section{
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Cibler uniquement la section "Parcours" */
+/* ✅ SECTION "Parcours" harmonisée avec "Projet Détails" */
 #parcours {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    padding-top: 5vh;
 }
 
+/* ✅ TITRE DU PARCOURS - MÊME STYLE QUE LES AUTRES SECTIONS */
 #parcours h2 {
-    color: #333;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 0 10px #1c077b; /* Effet lumineux bleu */
 }
 
-/* Styliser les boutons d'onglets uniquement pour #parcours */
+/* ✅ Conteneur principal des onglets */
 #parcours .tabs {
     display: flex;
     justify-content: center;
@@ -537,36 +543,90 @@ section{
     margin-bottom: 20px;
 }
 
+/* ✅ Boutons onglets avec effet harmonisé */
 #parcours .tab-button {
     padding: 10px 15px;
     font-size: 16px;
     border: none;
-    background: #007BFF;
+    background: rgba(7, 35, 149, 0.8); /* Bleu foncé semi-transparent */
     color: white;
     cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 #parcours .tab-button:hover {
-    background: #0056b3;
+    background: rgba(25, 14, 234, 0.9); /* Bleu plus clair */
+    transform: scale(1.05);
 }
 
 #parcours .tab-button.active {
     background: #0056b3;
 }
 
-/* Cacher les contenus sauf celui actif */
+/* ✅ Contenu des expériences harmonisé avec "Projet Détails" */
 #parcours .tab-content {
     display: none;
-    background: #f9f9f9;
+    background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(25, 0, 255, 0.3); /* Ombre bleutée */
+    position: relative;
+    padding-bottom: 20px;
+    text-align: justify;
+    color: white; /* ✅ Texte en blanc */
 }
 
 #parcours .tab-content.active {
     display: block;
+}
+
+/* ✅ TITRE ET ENTREPRISE alignés au centre */
+#parcours .tab-content h3,
+#parcours .tab-content .entreprise {
+    text-align: center;
+    color: #00AEEF; /* Bleu clair pour titres */
+}
+
+/* ✅ Tous les paragraphes en blanc */
+#parcours .tab-content p {
+    color: white;
+}
+
+/* ✅ SCROLLBAR PERSONNALISÉE comme "Projet Détails" */
+#parcours .tab-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+#parcours .tab-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+#parcours .tab-content::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #03077b, #f7f7f7);
+    border-radius: 10px;
+}
+
+#parcours .tab-content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #1512bc, #f0f4f2);
+}
+
+/* ✅ MEDIA QUERIES POUR RESPONSIVE */
+@media (max-width: 900px) {
+    #parcours {
+        width: 95%;
+    }
+
+    #parcours .tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #parcours .tab-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
 }
 
 /* Responsive Design */
