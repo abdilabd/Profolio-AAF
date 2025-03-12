@@ -86,7 +86,7 @@ h2 {
 
 /* ✅ Liste des projets avec scroll vertical uniquement */
 .projets-list {
-    width: 28%;
+    width: 30%;
     max-height: 80vh; /* Ajuste la hauteur selon ton besoin */
     overflow-y: auto; /* ✅ Scroll vertical */
     overflow-x: hidden; /* ✅ Bloque le scroll horizontal */
