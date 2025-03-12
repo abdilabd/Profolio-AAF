@@ -38,8 +38,8 @@ nav {
 }
 
 .logo span {
-    color: #037b07;
-    text-shadow: 0 0 10px #077b32;
+    color: #071a7b;
+    text-shadow: 0 0 10px #071a7b;
 }
 
 .links {
@@ -86,7 +86,7 @@ h2 {
 
 /* ✅ Liste des projets avec scroll vertical uniquement */
 .projets-list {
-    width: 25%;
+    width: 28%;
     max-height: 80vh; /* Ajuste la hauteur selon ton besoin */
     overflow-y: auto; /* ✅ Scroll vertical */
     overflow-x: hidden; /* ✅ Bloque le scroll horizontal */

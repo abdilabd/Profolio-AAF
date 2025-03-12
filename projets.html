@@ -30,11 +30,11 @@
             <!-- Liste des projets -->
             <div class="projets-list">
                 <button onclick="showProject(1)">Datathon Normandie 2024</button>
+                <button onclick="showProject(5)">SIG et gestion des titres fonciers</button>
                 <button onclick="showProject(2)">Webmapping</button>
                 <button onclick="showProject(3)">Analyse de Données SIG</button>
                 <button onclick="showProject(4)">Aménagement urbain durable</button>
-                <button onclick="showProject(5)">Analyse spatio-temporelle</button>
-                <button onclick="showProject(6)">Amenagement</button>
+                <button onclick="showProject(6)">Dynamique spatio-temporelle</button>
                 <button onclick="showProject(7)">Autres réalisations cartographiques</button>
             </div>
 
@@ -112,7 +112,17 @@
                         <button class="next" onclick="changeSlide(1, 'amenagement1')">&#10095;</button>
                         </div>
                 </div>
-
+                <div id="projet5" class="projet-content slider">
+                    <h3>Évaluation d’un modèle climatique par une approche géospatiale.</h3>
+                    <p class="objectif">L'objectif principal de ce projet était de créer une base de données spatiale qui englobait toutes les informations relatives
+                    aux propriétés foncières d'une commune. Ensuite, j'ai mis au point une application SIG web pour centraliser les données foncières, 
+                    y compris les plans et autres informations associées. Cette application a simplifié la gestion et l'accès à ces données pour les utilisateurs</p>
+                    <div class="slider-container">
+                        <button class="prev" onclick="changeSlide(-1, 'bss')">&#10094;</button>
+                        <img id="bss-img" src="images/image16.png" alt="Base de données" onclick="openLightbox(this)">
+                        <button class="next" onclick="changeSlide(1, 'bss')">&#10095;</button>
+                    </div> 
+                </div>
                 <div id="projet7" class="projet-content slider">
                     <h3>Évaluation d’un modèle climatique par une approche géospatiale.</h3>
                     <p class="objectif">Voici quelques autres réalisations cartographiques, 
