@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9PY3BGNY8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P9PY3BGNY8');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets</title>
     <link rel="stylesheet" href="projets.css">
 </head>
+
 <body>
-        <!-- Barre de navigation -->
-        <nav>
-            <div class="nav-container">
-                <div class="logo">
-                    Abdourazak <span>FARAH</span>
-                </div>
-                <div class="links">
-                    <div class="link"><a href="index.html#home">ACCEUIL</a></div>
-                    <div class="link"><a href="index.html#competences">COMPETENCES</a></div>
-                    <div class="link"><a href="index.html#parcours">EXPERIENCES</a></div>
-                    <div class="link"><a href="projets.html">PROJETS</a></div>
-                    <div class="link"><a href="index.html#contact">CONTACT</a></div>
-                </div>
-                <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    <!-- Barre de navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                Abdourazak <span>FARAH</span>
             </div>
-        </nav>
+            <div class="links">
+                <div class="link"><a href="index.html#home">ACCEUIL</a></div>
+                <div class="link"><a href="index.html#competences">COMPETENCES</a></div>
+                <div class="link"><a href="index.html#parcours">EXPERIENCES</a></div>
+                <div class="link"><a href="projets.html">PROJETS</a></div>
+                <div class="link"><a href="index.html#contact">CONTACT</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+    </nav>
 
     <section id="projets">
         <h2>Mes Projets</h2>
@@ -42,139 +53,183 @@
             <!-- Détails du projet affiché -->
             <div class="projet-detail">
                 <div id="projet1" class="projet-content">
-                    <h3>Développement d'un site web interactif pour la valorisation du patrimoine et du tourisme en Normandie</h3>
-                    <p class="objectif">Dans le cadre d'un concours organisé par la région Normandie, 
+                    <h3>Développement d'un site web interactif pour la valorisation du patrimoine et du tourisme en
+                        Normandie</h3>
+                    <p class="objectif">Dans le cadre d'un concours organisé par la région Normandie,
                         j'ai collaboré avec une équipe pluridisciplinaire pour concevoir et développer un prototype de
-                         solution numérique innovante en un mois. L'objectif était de manipuler, analyser et valoriser 
-                         des données open data liées au patrimoine et au tourisme, tout en ayant un impact positif sur le 
-                         territoire normand et sa population.</p>
-                         <a href="https://kaizer1er.github.io/Datathon/" class="btn" target="_blank">Voir le site</a>
+                        solution numérique innovante en un mois. L'objectif était de manipuler, analyser et valoriser
+                        des données open data liées au patrimoine et au tourisme, tout en ayant un impact positif sur le
+                        territoire normand et sa population.</p>
+                    <a href="https://kaizer1er.github.io/Datathon/" class="btn" target="_blank">Voir le site</a>
                     <video controls>
                         <source src="videos/VID-20241215-WA0002.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas la lecture de vidéos.
                     </video>
-                    <p class="resultat">Notre site web offre une expérience interactive et personnalisée pour 
-                        explorer le patrimoine normand. Grâce à la géolocalisation, il vous propose une sélection de sites patrimoniaux à proximité,
-                         en fonction de votre position et du temps que vous souhaitez y consacrer (15, 30 minutes ou 1 heure). Vous pouvez planifier votre 
-                         itinéraire en choisissant votre moyen de transport (marche, vélo, voiture, etc.) pour accéder facilement à ces lieux. Le site intègre 
-                         également une fonctionnalité de réservation d'hôtels labellisés écoresponsables, pour un séjour durable. Pour enrichir notre base de données,
-                         des formulaires permettent aux utilisateurs de partager leurs avis et suggestions. Une carte 3D interactive offre une visualisation immersive
-                         des sites, avec des options de filtrage par époque et par département, pour une exploration adaptée à vos centres d'intérêt.</p>
+                    <p class="resultat">Notre site web offre une expérience interactive et personnalisée pour
+                        explorer le patrimoine normand. Grâce à la géolocalisation, il vous propose une sélection de
+                        sites patrimoniaux à proximité,
+                        en fonction de votre position et du temps que vous souhaitez y consacrer (15, 30 minutes ou 1
+                        heure). Vous pouvez planifier votre
+                        itinéraire en choisissant votre moyen de transport (marche, vélo, voiture, etc.) pour accéder
+                        facilement à ces lieux. Le site intègre
+                        également une fonctionnalité de réservation d'hôtels labellisés écoresponsables, pour un séjour
+                        durable. Pour enrichir notre base de données,
+                        des formulaires permettent aux utilisateurs de partager leurs avis et suggestions. Une carte 3D
+                        interactive offre une visualisation immersive
+                        des sites, avec des options de filtrage par époque et par département, pour une exploration
+                        adaptée à vos centres d'intérêt.</p>
                 </div>
                 <div id="projet8" class="projet-content slider">
                     <h3>Analyse de l'évolution de l'occupation des sols dans le Beauvaisis (2006-2012)</h3>
-                    <p class="objectif">L'objectif de ce projet est de créer une application web interactive avec Shiny qui permet d'explorer et d'analyser 
-                    les données d'occupation des sols dans la région de Beauvaisis, en France. L'application permet aux utilisateurs de visualiser les changements 
-                    dans l'occupation des sols entre les années 2006 et 2012 à l'échelle des communes, en affichant
-                    une carte interactive, des graphiques et un tableau des surfaces totales par catégorie d'occupation des sols.</p>
+                    <p class="objectif">L'objectif de ce projet est de créer une application web interactive avec Shiny
+                        qui permet d'explorer et d'analyser
+                        les données d'occupation des sols dans la région de Beauvaisis, en France. L'application permet
+                        aux utilisateurs de visualiser les changements
+                        dans l'occupation des sols entre les années 2006 et 2012 à l'échelle des communes, en affichant
+                        une carte interactive, des graphiques et un tableau des surfaces totales par catégorie
+                        d'occupation des sols.</p>
                     <video controls>
                         <source src="videos/media1.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas la lecture de vidéos.
                     </video>
-                    <p class="methodologie">Pour ce projet, j'ai utilisé Leaflet pour la cartographie interactive, en combinant HTML, CSS et JavaScript pour 
-                    structurer, styliser et ajouter des fonctionnalités interactives à la carte. J'ai également travaillé avec des données géospatiales pour assurer la précision 
-                    et la pertinence des informations affichées.</p>
+                    <p class="methodologie">Pour ce projet, j'ai utilisé Leaflet pour la cartographie interactive, en
+                        combinant HTML, CSS et JavaScript pour
+                        structurer, styliser et ajouter des fonctionnalités interactives à la carte. J'ai également
+                        travaillé avec des données géospatiales pour assurer la précision
+                        et la pertinence des informations affichées.</p>
                 </div>
                 <div id="projet2" class="projet-content slider">
                     <h3>Carte interactive de la densité de la métropole de Rouen (2022)</h3>
-                    <p class="objectif">L'objectif de ce projet était de créer une carte interactive visualisant la densité de population au sein de la métropole 
-                    de Rouen pour l'année 2022. Cette carte permet de mieux comprendre la répartition des habitants sur le territoire, 
-                    en mettant en évidence les zones à forte densité et celles plus faiblement peuplées.</p>
+                    <p class="objectif">L'objectif de ce projet était de créer une carte interactive visualisant la
+                        densité de population au sein de la métropole
+                        de Rouen pour l'année 2022. Cette carte permet de mieux comprendre la répartition des habitants
+                        sur le territoire,
+                        en mettant en évidence les zones à forte densité et celles plus faiblement peuplées.</p>
                     <a href="https://abdilabd.github.io/Webmapping/" class="btn" target="_blank">Voir le site</a>
                     <div class="slider-container">
                         <button class="prev" onclick="changeSlide(-1, 'cartographie')">&#10094;</button>
-                        <img id="cartographie-img" src="images/image0.png" alt="Cartographie 3D" onclick="openLightbox(this)">
+                        <img id="cartographie-img" src="images/image0.png" alt="Cartographie 3D"
+                            onclick="openLightbox(this)">
                         <button class="next" onclick="changeSlide(1, 'cartographie')">&#10095;</button>
                     </div>
-                    <p class="methodologie">Pour ce projet, j'ai utilisé Leaflet pour la cartographie interactive, en combinant HTML, CSS et JavaScript pour 
-                    structurer, styliser et ajouter des fonctionnalités interactives à la carte. J'ai également travaillé avec des données géospatiales pour assurer la précision 
-                    et la pertinence des informations affichées.</p>
+                    <p class="methodologie">Pour ce projet, j'ai utilisé Leaflet pour la cartographie interactive, en
+                        combinant HTML, CSS et JavaScript pour
+                        structurer, styliser et ajouter des fonctionnalités interactives à la carte. J'ai également
+                        travaillé avec des données géospatiales pour assurer la précision
+                        et la pertinence des informations affichées.</p>
                 </div>
 
                 <div id="projet3" class="projet-content slider">
                     <h3>Évaluation d’un modèle climatique par une approche géospatiale.</h3>
-                    <p class="objectif">L’objectif principal de cette étude est d'analyser la performance du modèle climatique CLMNCC pour simuler les précipitations
-                    à Djibouti, en comparant les simulations aux données d'observation. Cette analyse est essentielle pour comprendre les dynamiques climatiques 
-                    et leur impact sur des régions vulnérables comme Djibouti. En outre, ce projet vise à évaluer la capacité du modèle à reproduire le climat passé et actuel de Djibouti en termes de précipitations</p>
+                    <p class="objectif">L’objectif principal de cette étude est d'analyser la performance du modèle
+                        climatique CLMNCC pour simuler les précipitations
+                        à Djibouti, en comparant les simulations aux données d'observation. Cette analyse est
+                        essentielle pour comprendre les dynamiques climatiques
+                        et leur impact sur des régions vulnérables comme Djibouti. En outre, ce projet vise à évaluer la
+                        capacité du modèle à reproduire le climat passé et actuel de Djibouti en termes de
+                        précipitations</p>
                     <p class="methodologie">Méthodologie : Traitement de données avec Python.</p>
                     <div class="slider-container">
                         <button class="prev" onclick="changeSlide(-1, 'sig')">&#10094;</button>
                         <img id="sig-img" src="images/Image1.png" alt="Analyse SIG" onclick="openLightbox(this)">
                         <button class="next" onclick="changeSlide(1, 'sig')">&#10095;</button>
                     </div>
-                    
+
                 </div>
                 <div id="projet4" class="projet-content slider">
                     <h3>Projet d'aménagement urbain durable</h3>
                     <h4>Projet n°1 : Conception d'un éco-quartier à Angers, France</h4>
-                    <p class="objectif">Dans le cadre de ma formation en géomatique appliquée à la dynamique territoriale, 
-                    j'ai réalisé un projet académique en groupe qui consistait à la mise en place d'un éco-quartier à Angers, en France. 
-                    Nous avons utilisé des documents urbains existants pour élaborer une proposition qui respecte les principes du développement durable.</p>
+                    <p class="objectif">Dans le cadre de ma formation en géomatique appliquée à la dynamique
+                        territoriale,
+                        j'ai réalisé un projet académique en groupe qui consistait à la mise en place d'un éco-quartier
+                        à Angers, en France.
+                        Nous avons utilisé des documents urbains existants pour élaborer une proposition qui respecte
+                        les principes du développement durable.</p>
                     <div class="slider-container">
-                    <button class="prev" onclick="changeSlide(-1, 'amenagement')">&#10094;</button>
-                    <img id="amenagement-img" src="images/image30.png" alt="Amenagement durable" onclick="openLightbox(this)">
-                    <button class="next" onclick="changeSlide(1, 'amenagement')">&#10095;</button>
+                        <button class="prev" onclick="changeSlide(-1, 'amenagement')">&#10094;</button>
+                        <img id="amenagement-img" src="images/image30.png" alt="Amenagement durable"
+                            onclick="openLightbox(this)">
+                        <button class="next" onclick="changeSlide(1, 'amenagement')">&#10095;</button>
                     </div>
-                    
-                    <p><h4>Projet n°2 : Création d'un parc urbain à Abidjan, Côte d'Ivoire</h4></p>
-                    <p class="objectif">Ce projet porte sur la création d'un parc urbain dans une zone sensible d'Abidjan. Dans ce projet, nous avons également 
-                    utilisé des documents urbains pour proposer un plan d'aménagement visant à limiter l'étalement urbain et à réduire les risques d'inondation. 
-                    J'ai prispart à l'analyse géospatiale des zones à risque et à la mise en place d'un aménagement paysager adapté pour préserver les écosystèmes locaux.</p>
-                        <div class="slider-container">
+
+                    <p>
+                    <h4>Projet n°2 : Création d'un parc urbain à Abidjan, Côte d'Ivoire</h4>
+                    </p>
+                    <p class="objectif">Ce projet porte sur la création d'un parc urbain dans une zone sensible
+                        d'Abidjan. Dans ce projet, nous avons également
+                        utilisé des documents urbains pour proposer un plan d'aménagement visant à limiter l'étalement
+                        urbain et à réduire les risques d'inondation.
+                        J'ai prispart à l'analyse géospatiale des zones à risque et à la mise en place d'un aménagement
+                        paysager adapté pour préserver les écosystèmes locaux.</p>
+                    <div class="slider-container">
                         <button class="prev" onclick="changeSlide(-1, 'amenagement1')">&#10094;</button>
-                        <img id="amenagement1-img" src="images/image33.png" alt="Amenagement durable1" onclick="openLightbox(this)">
+                        <img id="amenagement1-img" src="images/image33.png" alt="Amenagement durable1"
+                            onclick="openLightbox(this)">
                         <button class="next" onclick="changeSlide(1, 'amenagement1')">&#10095;</button>
-                        </div>
+                    </div>
                 </div>
 
                 <div id="projet5" class="projet-content slider">
                     <h3>Évaluation d’un modèle climatique par une approche géospatiale.</h3>
-                    <p class="objectif">L'objectif principal de ce projet était de créer une base de données spatiale qui englobait toutes les informations relatives
-                    aux propriétés foncières d'une commune. Ensuite, j'ai mis au point une application SIG web pour centraliser les données foncières, 
-                    y compris les plans et autres informations associées. Cette application a simplifié la gestion et l'accès à ces données pour les utilisateurs</p>
+                    <p class="objectif">L'objectif principal de ce projet était de créer une base de données spatiale
+                        qui englobait toutes les informations relatives
+                        aux propriétés foncières d'une commune. Ensuite, j'ai mis au point une application SIG web pour
+                        centraliser les données foncières,
+                        y compris les plans et autres informations associées. Cette application a simplifié la gestion
+                        et l'accès à ces données pour les utilisateurs</p>
                     <div class="slider-container">
                         <button class="prev" onclick="changeSlide(-1, 'bss')">&#10094;</button>
                         <img id="bss-img" src="images/image16.png" alt="Base de données" onclick="openLightbox(this)">
                         <button class="next" onclick="changeSlide(1, 'bss')">&#10095;</button>
-                    </div> 
+                    </div>
                 </div>
 
                 <div id="projet6" class="projet-content slider">
                     <h3>Analyse spatio-temporelle par télédétection et SIG</h3>
-                    <h4>Projet n°1 : Développement d’une méthode de cartographie des services écosystémiques par télédétection dans 3 sites pilotes de la région méditerranée </h4>
-                    <p class="objectif">L’objectif de ce projet est de développer des indicateurs permettant de caractériser l’évolution spatio temporelle des services 
-                    écosystémiques rendus par les sols dans 3 sites pilotes situés au Maroc, Egypt et Turquie. L’idée consiste à utiliser des séries d’images Sentinel 
-                    2 pour calculer des indices spectraux qui permettent d’appréhender les sévices écosystémiques et caractériser ainsi leur évolution spatio-temporelle sur le court terme.</p>
+                    <h4>Projet n°1 : Développement d’une méthode de cartographie des services écosystémiques par
+                        télédétection dans 3 sites pilotes de la région méditerranée </h4>
+                    <p class="objectif">L’objectif de ce projet est de développer des indicateurs permettant de
+                        caractériser l’évolution spatio temporelle des services
+                        écosystémiques rendus par les sols dans 3 sites pilotes situés au Maroc, Egypt et Turquie.
+                        L’idée consiste à utiliser des séries d’images Sentinel
+                        2 pour calculer des indices spectraux qui permettent d’appréhender les sévices écosystémiques et
+                        caractériser ainsi leur évolution spatio-temporelle sur le court terme.</p>
                     <!--<div class="slider-container">
                     <button class="prev" onclick="changeSlide(-1, 'espt')">&#10094;</button> 
                     /*<img id="espt-img" src="images/image30.png" alt="Amenagement durable" onclick="openLightbox(this)"> 
                     <button class="next" onclick="changeSlide(1, 'espt')">&#10095;</button>
                     </div> -->
-                    
-                    <p><h4>Projet n°2 : Dynamique spatio-temporelle des mangroves à Djibouti</h4></p>
-                    <p class="objectif">L'objectif de cette etude est double, d'une part mettre en evidence la dynamique spatio-temporelle des
-                        mangroves en nord du pays dans une periode intra-annuelle rt d'autre part,dans une periode interannuelle.
+
+                    <p>
+                    <h4>Projet n°2 : Dynamique spatio-temporelle des mangroves à Djibouti</h4>
                     </p>
-                        <div class="slider-container">
+                    <p class="objectif">L'objectif de cette etude est double, d'une part mettre en evidence la dynamique
+                        spatio-temporelle des
+                        mangroves en nord du pays dans une periode intra-annuelle rt d'autre part,dans une periode
+                        interannuelle.
+                    </p>
+                    <div class="slider-container">
                         <button class="prev" onclick="changeSlide(-1, 'espt1')">&#10094;</button>
-                        <img id="espt1-img" src="images/image13.png" alt="Analyse spatio-temporelle" onclick="openLightbox(this)">
+                        <img id="espt1-img" src="images/image13.png" alt="Analyse spatio-temporelle"
+                            onclick="openLightbox(this)">
                         <button class="next" onclick="changeSlide(1, 'espt1')">&#10095;</button>
-                        </div>
+                    </div>
                 </div>
 
                 <div id="projet7" class="projet-content slider">
                     <h3>Évaluation d’un modèle climatique par une approche géospatiale.</h3>
-                    <p class="objectif">Voici quelques autres réalisations cartographiques, 
-                    mettant en œuvre des thématiques variées pour répondre à des enjeux territoriaux spécifiques.</p>
+                    <p class="objectif">Voici quelques autres réalisations cartographiques,
+                        mettant en œuvre des thématiques variées pour répondre à des enjeux territoriaux spécifiques.
+                    </p>
                     <div class="slider-container">
                         <button class="prev" onclick="changeSlide(-1, 'arc')">&#10094;</button>
                         <img id="arc-img" src="images/Image2.png" alt="Cartographie" onclick="openLightbox(this)">
                         <button class="next" onclick="changeSlide(1, 'arc')">&#10095;</button>
                     </div>
-                    
+
                 </div>
             </div>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -184,4 +239,5 @@
 
     <script src="projets.js"></script>
 </body>
+
 </html>
