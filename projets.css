@@ -1,7 +1,7 @@
 /* Style général */
 body {
-    background-color: black;
-    color: white;
+    background-color: #f5f5f5;
+    color: #333;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
@@ -16,12 +16,13 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: white;
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 8%;
+    box-shadow: 0 2px 10px rgba(0, 170, 85, 0.1);
 }
 
 .nav-container {
@@ -32,14 +33,14 @@ nav {
 }
 
 .logo {
-    color: white;
+    color: #333;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 .logo span {
-    color: #071a7b;
-    text-shadow: 0 0 10px #071a7b;
+    color: #00aa55;
+    text-shadow: 0 0 10px #00aa55;
 }
 
 .links {
@@ -49,13 +50,13 @@ nav {
 
 .links .link a {
     font-size: 1.2rem;
-    color: white;
+    color: #333;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .links .link a:hover {
-    color: #15077b;
+    color: #00aa55;
 }
 
 /*  Évite que le contenu soit caché sous la barre */
@@ -68,7 +69,7 @@ h2 {
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #1c077b;
+    text-shadow: 0 0 10px #00dd77;
 }
 
 /* ✅ CONTAINER PRINCIPAL : Ajustement optimal */
@@ -92,9 +93,9 @@ h2 {
     overflow-x: hidden; /* ✅ Bloque le scroll horizontal */
     padding-right: 0px;
     padding-left: 0px;
-    background: rgba(7, 35, 149, 0.1);
+    background: rgba(0, 170, 85, 0.1);
     border-radius: 5px;
-    box-shadow: 0 0 15px rgba(25, 14, 234, 0.3);
+    box-shadow: 0 0 15px rgba(0, 170, 85, 0.3);
     position: relative;
     left: -35px;
 }
@@ -106,8 +107,8 @@ button {
     padding: 15px;
     font-size: 18px;
     cursor: pointer;
-    background: #444;
-    color: white;
+    background: #ddd;
+    color: #333;
     border: none;
     border-radius: 5px;
     transition: 0.3s;
@@ -115,7 +116,8 @@ button {
 }
 
 button:hover {
-    background: #2e077b;
+    background: #00cc66;
+    color: white;
 }
 
 
@@ -126,13 +128,14 @@ button:hover {
     overflow-y: auto; /* ✅ Scroll vertical */
     overflow-x: hidden; /* ✅ Bloque le scroll horizontal */
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 170, 85, 0.1);
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(25, 0, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 170, 85, 0.3);
     position: relative;
     top: -40px;  /* Remonte ces deux sections */
     padding-bottom: 80px; /* Ajoute un espace en bas */
     text-align: justify; /* ✅ Justifie le texte */
+    color: #333;
 }
 .projet-detail h3,
 .projet-detail a {
@@ -152,6 +155,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* ✅ Important pour que z-index fonctionne */
 }
 
 /* ✅ IMAGES RESPONSIVES */
@@ -189,6 +193,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     transition: background 0.3s ease-in-out;
+    z-index: 10; /* ✅ Assure que les flèches restent au-dessus de l'image */
 }
 
 .prev:hover, .next:hover {
@@ -216,14 +221,14 @@ button:hover {
 /* ✅ Style du curseur de défilement */
 .projet-detail::-webkit-scrollbar-thumb,
 .projets-list::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #03077b, #f7f7f7);
+    background: linear-gradient(45deg, #00aa55, #00dd77);
     border-radius: 10px;
 }
 
 /* ✅ Effet au survol */
 .projet-detail::-webkit-scrollbar-thumb:hover,
 .projets-list::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #1512bc, #f0f4f2);
+    background: linear-gradient(45deg, #00dd77, #00ff99);
 }
 .btn {
     display: inline-block;
