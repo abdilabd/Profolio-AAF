@@ -39,21 +39,36 @@ function eraseText(){
     }
 }
 window.onload = typeWriter
+
+// Fonction pour scroller vers une ancre
+function scrollToAnchor(anchorId) {
+    const targetSection = document.querySelector(anchorId);
+    if (targetSection) {
+        window.scrollTo({
+            top: targetSection.offsetTop - 50,
+            behavior: "smooth"
+        });
+    }
+}
+
+// Gère le scroll vers une ancre au chargement de la page
+window.addEventListener('load', function() {
+    const hash = window.location.hash;
+    if (hash) {
+        setTimeout(() => scrollToAnchor(hash), 100);
+    }
+});
+
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(event) {
-        const targetId = this.getAttribute('href');
+        const href = this.getAttribute('href');
 
-        // Vérifie si le lien commence par "#" (ancre interne)
-        if (targetId.startsWith("#")) {
+        // Vérifie si c'est une ancre (commence par "#" ou contient "#")
+        if (href.startsWith("#") || href.includes("#")) {
             event.preventDefault();
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 50,
-                    behavior: "smooth"
-                });
-            }
+            // Extrait l'ID de l'ancre
+            const anchorId = href.substring(href.indexOf("#"));
+            scrollToAnchor(anchorId);
         }
         // Sinon, laisser la navigation normale se faire (ex: projets.html)
     });
