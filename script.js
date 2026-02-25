@@ -63,14 +63,11 @@ document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(event) {
         const href = this.getAttribute('href');
 
-        // Vérifie si c'est une ancre (commence par "#" ou contient "#")
-        if (href.startsWith("#") || href.includes("#")) {
+        // Si le lien est une ancre sur la page actuelle (commence par #)
+        if (href.startsWith("#")) {
             event.preventDefault();
-            // Extrait l'ID de l'ancre
-            const anchorId = href.substring(href.indexOf("#"));
-            scrollToAnchor(anchorId);
+            scrollToAnchor(href);
         }
-        // Sinon, laisser la navigation normale se faire (ex: projets.html)
     });
 });
 

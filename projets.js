@@ -1,3 +1,9 @@
+// Get modal elements
+var modal = document.getElementById("modal");
+var modalMedia = document.getElementById("modal-media");
+var modalText = document.getElementById("modal-text");
+
+// Slides data
 let slides = {
     cartographie: ["images/image0.png"],
     sig: ["images/image24.png","images/image25.png","images/image7.png", "images/image23.png", "images/image36.png","images/Image1.png"],
@@ -9,67 +15,122 @@ let slides = {
 };
 
 let slideIndex = { cartographie: 0, sig: 0, amenagement: 0, amenagement1 :0, arc :0, bss: 0, espt1 : 0 };
+let currentCategory = null;
 
-// Masquer tous les projets au début
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".projet-content").forEach(el => el.style.display = "none");
-});
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".projet-content").forEach(el => el.style.display = "none");
-    document.getElementById("projet1").style.display = "block"; // ✅ Afficher le premier projet par défaut
-});
-
-function showProject(num) {
-    // Masquer tous les projets
-    document.querySelectorAll(".projet-content").forEach(el => {
-        el.style.display = "none";
-
-        // Arrêter la vidéo en arrière-plan
-        let video = el.querySelector("video");
-        if (video) {
-            video.pause();
-            video.currentTime = 0; // Remet la vidéo au début
+// Add click event to cards
+var cards = document.querySelectorAll('.card');
+cards.forEach(function(card) {
+    card.addEventListener('click', function() {
+        var title = this.querySelector('.title').textContent;
+        var content = this.getAttribute('data-content');
+        var type = this.getAttribute('data-type');
+        var category = this.getAttribute('data-category');
+        // Remove title if it appears at the beginning of content
+        if (content.startsWith(title)) {
+            content = content.substring(title.length).trim();
         }
-    });
-
-    // Afficher le projet sélectionné
-    document.getElementById(`projet${num}`).style.display = "block";
-}
-
-function changeSlide(n, category) {
-    slideIndex[category] = (slideIndex[category] + n + slides[category].length) % slides[category].length;
-    document.getElementById(`${category}-img`).src = slides[category][slideIndex[category]];
-}
-
-// ✅ Fonction pour agrandir l'image au clic
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".slider-container img").forEach(img => {
-        img.addEventListener("click", function() {
-            let modal = document.createElement("div");
-            modal.style.position = "fixed";
-            modal.style.top = "0";
-            modal.style.left = "0";
-            modal.style.width = "100vw";
-            modal.style.height = "100vh";
-            modal.style.background = "rgba(0, 0, 0, 0.8)";
-            modal.style.display = "flex";
-            modal.style.alignItems = "center";
-            modal.style.justifyContent = "center";
-            modal.style.zIndex = "1000";
-            
-            let imgClone = document.createElement("img");
-            imgClone.src = this.src;
-            imgClone.style.maxWidth = "90%";
-            imgClone.style.maxHeight = "90%";
-            imgClone.style.borderRadius = "10px";
-
-            modal.appendChild(imgClone);
-            document.body.appendChild(modal);
-
-            // Fermer en cliquant sur l'image
-            modal.addEventListener("click", function() {
-                modal.remove();
-            });
-        });
+        modalText.textContent = content;
+        
+        // Clear previous media
+        modalMedia.innerHTML = '';
+        
+        // Add media based on type
+        if (type === 'video') {
+            var videoSrc = this.querySelector('video source').getAttribute('src');
+            var video = document.createElement('video');
+            video.controls = true;
+            video.style.maxWidth = '100%';
+            video.style.maxHeight = '400px';
+            video.style.objectFit = 'contain';
+            var source = document.createElement('source');
+            source.src = videoSrc;
+            source.type = 'video/mp4';
+            video.appendChild(source);
+            modalMedia.appendChild(video);
+        } else if (type === 'image') {
+            if (category && slides[category] && slides[category].length > 1) {
+                // Show slider
+                currentCategory = category;
+                var sliderContainer = document.createElement('div');
+                sliderContainer.className = 'slider-container';
+                var prevBtn = document.createElement('button');
+                prevBtn.className = 'prev';
+                prevBtn.innerHTML = '&#10094;';
+                prevBtn.onclick = function() { changeSlide(-1); };
+                var img = document.createElement('img');
+                img.id = 'modal-slider-img';
+                img.src = slides[category][slideIndex[category]];
+                img.style.maxWidth = '100%';
+                img.style.maxHeight = '400px';
+                img.style.objectFit = 'contain';
+                var nextBtn = document.createElement('button');
+                nextBtn.className = 'next';
+                nextBtn.innerHTML = '&#10095;';
+                nextBtn.onclick = function() { changeSlide(1); };
+                sliderContainer.appendChild(prevBtn);
+                sliderContainer.appendChild(img);
+                sliderContainer.appendChild(nextBtn);
+                modalMedia.appendChild(sliderContainer);
+            } else {
+                // Show single image
+                var imgSrc = this.style.backgroundImage.replace('url("', '').replace('")', '');
+                if (imgSrc) {
+                    var img = document.createElement('img');
+                    img.src = imgSrc;
+                    img.style.maxWidth = '100%';
+                    img.style.maxHeight = '400px';
+                    img.style.objectFit = 'contain';
+                    modalMedia.appendChild(img);
+                }
+            }
+        }
+        
+        // Add link button if exists
+        var link = this.getAttribute('data-link');
+        if (link) {
+            var btn = document.createElement('a');
+            btn.href = link;
+            btn.target = '_blank';
+            btn.className = 'btn';
+            btn.textContent = 'Voir le site';
+            modalMedia.appendChild(btn);
+        }
+        
+        modal.style.display = "block";
+        document.body.style.pointerEvents = "none";
+        document.body.style.overflow = "hidden";
+        modal.style.pointerEvents = "auto";
+        // Hide all card titles
+        document.querySelectorAll('.title').forEach(t => t.style.display = 'none');
     });
 });
+
+// Function to close modal
+function closeModal() {
+    modal.style.display = "none";
+    document.body.style.pointerEvents = "auto";
+    document.body.style.overflow = "auto";
+    // Show all card titles again
+    document.querySelectorAll('.title').forEach(t => t.style.display = 'block');
+}
+
+// Close modal when clicking outside
+modal.addEventListener('click', function(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+// Function to change slide
+function changeSlide(n) {
+    if (currentCategory) {
+        slideIndex[currentCategory] = (slideIndex[currentCategory] + n + slides[currentCategory].length) % slides[currentCategory].length;
+        document.getElementById('modal-slider-img').src = slides[currentCategory][slideIndex[currentCategory]];
+    }
+}
+
+// Hamburger menu function
+function hamburg() {
+    const links = document.querySelector('.links');
+    links.classList.toggle('active');
+}
