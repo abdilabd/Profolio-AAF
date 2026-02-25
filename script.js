@@ -9,7 +9,7 @@ function cancel(){
 // Typewriter Effect
 const texts = [
     "Géomaticien",
-    "Developpeur SIG-WEB",
+    "Developpeur SIG",
     "Cartographe",
     "Analyste de données spatiales"
 ]
