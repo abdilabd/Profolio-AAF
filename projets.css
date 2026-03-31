@@ -299,6 +299,30 @@ h1 {
     }
 }
 
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+        max-width: 100%;
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        max-width: 100%;
+        min-height: 200px;
+    }
+    .card .title {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 @media (max-width: 480px) {
     .grid {
         grid-template-columns: 1fr;
