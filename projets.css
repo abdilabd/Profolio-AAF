@@ -84,19 +84,23 @@ h1 {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
 .card {
     position: relative;
-    height: 200px;
-    background-size: contain;
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 8px;
-    overflow: hidden;
+    border: 2px solid #000;
+    overflow: visible;
     cursor: pointer;
     transition: transform 0.3s ease;
     display: flex;
@@ -109,12 +113,19 @@ h1 {
 }
 
 .card .title {
-    color: #00aa55;
+    position: absolute;
+    top: -24px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #0b5a2a;
     font-size: 14px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(255,255,255,0.7);
-    z-index: 1;
-    margin: 10px;
+    text-shadow: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    z-index: 2;
+    margin: 0;
+    display: inline-block;
 }
 
 .card[data-type="image"] {
@@ -191,10 +202,6 @@ h1 {
     z-index: 0;
 }
 
-.card .title {
-    position: relative;
-    z-index: 2;
-}
 
 /* Modal styles */
 .modal {
