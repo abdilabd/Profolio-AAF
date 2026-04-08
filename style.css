@@ -253,11 +253,37 @@ section{
     .main-container .content{
         width: 95%;
     }
-    .main-container button{
+    .content button{
         margin-top: 15px;
         width: 100%;
     }
+    nav {
+        padding: 0 4%;
+    }
+    .nav-container {
+        padding: 0;
+    }
+    .dropdown .links a {
+        padding: 15px 0;
+        font-size: 1rem;
+    }
 }
+
+@media (max-width: 600px) {
+    section {
+        min-height: auto;
+        padding: 90px 4% 40px;
+    }
+    .main-container {
+        padding-top: 0;
+    }
+    .content p,
+    .competence p,
+    .contact-info p {
+        font-size: 0.95rem;
+    }
+}
+
 #competences {
     width: 100%;
     padding: 30px 5%;

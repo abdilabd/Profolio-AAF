@@ -57,6 +57,25 @@ nav {
     color: #00aa55;
 }
 
+.links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    gap: 0;
+}
+
+.links.active .link {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
 .hamburg {
     display: none;
     color: #333;
@@ -216,7 +235,7 @@ h1 {
     background-color: rgba(0,0,0,0.7);
 }
 
-.modal-content {
+..modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -224,9 +243,9 @@ h1 {
     background-color: #fefefe;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: min(95%, 600px);
     max-width: 600px;
-    max-height: 80vh;
+    max-height: 90vh;
     overflow-y: auto;
     border-radius: 8px;
 }
@@ -296,6 +315,29 @@ h1 {
     }
     .hamburg {
         display: block;
+    }
+    .card {
+        max-width: none;
+        aspect-ratio: auto;
+        min-height: 220px;
+    }
+    .card .title {
+        font-size: 1rem;
+        top: 8px;
+        left: 8px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        min-height: 260px;
+    }
+    .links.active .link {
+        font-size: 1.1rem;
     }
 }
 
