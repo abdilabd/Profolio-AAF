@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation des Réalisations - Géomaticien</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projets.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                Abdourazak <span>FARAH</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="index.html#home">ACCEUIL</a></div>
+                <div class="link"><a href="index.html#competences">COMPETENCES</a></div>
+                <div class="link"><a href="projets.html">RÉALISATIONS</a></div>
+                <div class="link"><a href="experiences.html">EXPERIENCES</a></div>
+                <div class="link"><a href="index.html#contact">CONTACT</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+    </nav>
+    
+    <h1>Mes réalisations</h1>
+    
+    <div class="container">
+        <div class="grid">
+            <!-- Carte 1: Datathon Normandie 2024 -->
+            <div class="card" data-type="video" data-content="Dans le cadre d'un concours organisé par la région Normandie, j'ai collaboré avec une équipe pluridisciplinaire pour concevoir et développer un prototype de solution numérique innovante en un mois. L'objectif était de manipuler, analyser et valoriser des données open data liées au patrimoine et au tourisme, tout en ayant un impact positif sur le territoire normand et sa population. Notre site web offre une expérience interactive et personnalisée pour explorer le patrimoine normand." data-link="https://kaizer1er.github.io/Datathon/">
+                <video class="video-bg" muted loop>
+                    <source src="videos/VID-20241215-WA0002.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <div class="title">Datathon Normandie 2024</div>
+            </div>
+            
+            <!-- Carte 2: Webmapping -->
+            <div class="card" data-type="image" data-category="cartographie" data-content="L'objectif de ce projet était de créer une carte interactive visualisant la densité de population au sein de la métropole de Rouen pour l'année 2022. Cette carte permet de mieux comprendre la répartition des habitants sur le territoire, en mettant en évidence les zones à forte densité et celles plus faiblement peuplées." style="background-image: url('images/image0.png');" data-link="https://abdilabd.github.io/Webmapping/">
+                <div class="title">Webmapping</div>
+            </div>
+            
+            <!-- Carte 4: Aménagement urbain durable -->
+            <div class="card" data-type="image" data-category="amenagement" data-content="Dans le cadre de ma formation en géomatique appliquée à la dynamique territoriale, j'ai réalisé un projet académique en groupe qui consistait à la mise en place d'un éco-quartier à Angers, en France. Nous avons utilisé des documents urbains existants pour élaborer une proposition qui respecte les principes du développement durable." style="background-image: url('images/image30.png');">
+                <div class="title">Aménagement urbain durable</div>
+            </div>
+            
+            <!-- Carte 4: Réalisation cartographique -->
+            <div class="card" data-type="image" data-category="arc" data-content="Voici quelques réalisations cartographiques, mettant en œuvre des thématiques variées pour répondre à des enjeux territoriaux spécifiques." style="background-image: url('images/N2.gif');">
+                <div class="title">Réalisation cartographique</div>
+            </div>
+
+            <!-- Carte 5: R-shiny -->
+            <div class="card" data-type="video" data-content="L'objectif de ce projet est de créer une application web interactive avec Shiny qui permet d'explorer et d'analyser les données d'occupation des sols dans la région de Beauvaisis, en France. L'application permet aux utilisateurs de visualiser les changements dans l'occupation des sols entre les années 2006 et 2012.">
+                <video class="video-bg" muted loop>
+                    <source src="videos/media1.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la vidéo.
+                </video>
+                <div class="title">R-shiny</div>
+            </div>
+
+            <!-- Carte 6: SIG et gestion des titres fonciers -->
+            <div class="card" data-type="image" data-category="bss" data-content="L'objectif principal de ce projet était de créer une base de données spatiale qui englobait toutes les informations relatives aux propriétés foncières d'une commune. Ensuite, j'ai mis au point une application SIG web pour centraliser les données foncières, y compris les plans et autres informations associées." style="background-image: url('images/image16.png');">
+                <div class="title">SIG et gestion des titres fonciers</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal pour afficher le texte -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modal-text"></p>
+            <div id="modal-media"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="projets.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P9PY3BGNY8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P9PY3BGNY8');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>A-FARAH Portfolio</title>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NL3T4543" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Abdourazak <span>FARAH</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a
+                        href="#home">ACCEUIL</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a
+                        href="#competences">COMPETENCES</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a
+                        href="./projets.html">RÉALISATIONS</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a
+                        href="experiences.html">EXPERIENCES</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a
+                        href="#contact">CONTACT</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">ACCEUIL</a>
+                <a href="#competences">COMPETENCES</a>
+                <a href="./projets.html">RÉALISATIONS</a>
+                <a href="experiences.html">EXPERIENCES</a>
+                <a href="#contact">CONTACT</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="images/PP.jpg" alt="Photo de profil de Abdourazak FARAH">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Bonjour, je m'appelle
+                    <span>ABDOURAZAK</span>
+                </h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">Je suis
+                    <span class="typewriter-text"></span><span class="cursor">|</span>
+                </div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Géomaticien spécialisé en gestion de bases de données SIG, analyse spatiale et cartographie numérique et interactive.
+                                                                Je suis titulaire d’un Master en géomatique appliquée à l’aménagement du territoire et d’une licence en SIG et informatique, 
+                                                                je conçois des solutions géographiques fiables et adaptées aux enjeux territoriaux et environnementaux. Mon objectif est de transformer les données spatiales en outils d’aide à la décision efficaces.</p>
+                <div class="social-links">
+                    <a href="https://github.com/abdilabd" aria-label="GitHub" data-aos="fade-up" data-aos-duration="1500"
+                        data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="Facebook" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/abdourazak-farah-595b3624a/" aria-label="LinkedIn" data-aos="fade-up"
+                        data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/Abdourazak93122" aria-label="Twitter / X" data-aos="fade-up" data-aos-duration="1500"
+                        data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="competences">
+        <h2 data-aos="fade-down" data-aos-duration="1500">Mes compétences</h2>
+        <div class="competences-container">
+            <div class="competence" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                <i class="fa-solid fa-map"></i>
+                <h3>SIG &amp; cartographie</h3>
+                <p>Je maîtrise les outils SIG tels qu’ArcGIS et QGIS pour l’analyse spatiale, le traitement et l’interprétation des données géographiques, ainsi que la production de cartographies adaptées aux besoins des projets et à l’aide à la décision.</p>
+            </div>
+
+            <div class="competence" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+                <i class="fa-solid fa-database"></i>
+                <h3>Bases de données</h3>
+                <p>Je mets en place, administre et exploite des bases de données spatiales et non spatiales, notamment avec PostgreSQL/PostGIS. J’utilise SQL pour structurer et optimiser les données, tout en garantissant leur cohérence et leurs performances.</p>
+            </div>
+
+            <div class="competence" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="600">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Analyse de données</h3>
+                <p>Je réalise des analyses statiques, spatiales et diachroniques pour extraire des indicateurs pertinents à partir de données géographiques. J’utilise Python et R pour croiser les sources, automatiser les traitements et produire des résultats exploitables à l’aide à la décision.</p>
+            </div>
+
+            <div class="competence" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="800">
+                <i class="fa-solid fa-satellite"></i>
+                <h3>Télédétection</h3>
+                <p>Je traite et analyse des images satellitaires pour des applications liées à l’occupation du sol, à l’environnement et à l’agriculture. Je maîtrise le calcul d’indices spectraux et l’interprétation des résultats pour caractériser les dynamiques spatio-temporelles des territoires.</p>
+            </div>
+
+            <div class="competence" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="1000">
+                <i class="fa-solid fa-code"></i>
+                <h3>Cartographie en ligne</h3>
+                <p>Je conçois et déploie des applications cartographiques interactives et des plateformes SIG Web pour la diffusion et la valorisation des données géographiques. Je mobilise des technologies telles qu’ArcGIS Online, R Shiny, Leaflet et Lizmap pour proposer des solutions web fonctionnelles et adaptées aux besoins des utilisateurs.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2 data-aos="fade-down" data-aos-duration="1500">Contactez-moi</h2>
+        <div class="contact-card" data-aos="zoom-in" data-aos-duration="1500">
+            <img src="images/PP.jpg" alt="Photo de Abdourazak FARAH">
+            <h3>Abdourazak FARAH</h3>
+            <p>Géomaticien | Analyste de données Géospatiales | SIG</p>
+            <div class="contact-info">
+                <p><i class="fa-solid fa-phone"></i> +33 6 52 46 89 22</p>
+                <p><i class="fa-solid fa-envelope"></i> zakabdillahi22@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Beauvais, FRANCE</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/abdilabd"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/abdourazak-farah-595b3624a/"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/Abdourazak93122"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

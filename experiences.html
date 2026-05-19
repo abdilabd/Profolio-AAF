@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expériences — Abdourazak FARAH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="experiences.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                Abdourazak <span>FARAH</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="index.html#home">ACCEUIL</a></div>
+                <div class="link"><a href="index.html#competences">COMPETENCES</a></div>
+                <div class="link"><a href="projets.html">RÉALISATIONS</a></div>
+                <div class="link"><a href="experiences.html" class="active-page">EXPÉRIENCES</a></div>
+                <div class="link"><a href="index.html#contact">CONTACT</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+    </nav>
+
+    <div class="exp-page">
+        <!-- Carte Leaflet -->
+        <div class="exp-map-wrapper">
+            <div id="exp-map"></div>
+        </div>
+
+        <!-- Panneau droit -->
+        <div class="exp-right">
+            <!-- Espace I : info sur l'expérience sélectionnée -->
+            <div class="exp-info-panel">
+                <div class="exp-info-header">
+                    <div id="exp-main-icon"></div>
+                    <div class="exp-info-meta">
+                        <span id="exp-info-type"></span>
+                        <div id="exp-info-organisme">–</div>
+                    </div>
+                </div>
+                <div id="exp-info-titre">–</div>
+                <div class="exp-info-location">
+                    <span><i class="fa-solid fa-location-dot"></i><span id="exp-info-lieu">–</span></span>
+                    <span><i class="fa-regular fa-calendar"></i><span id="exp-info-periode">–</span></span>
+                </div>
+                <p id="exp-info-desc">–</p>
+            </div>
+
+            <!-- Liste des expériences -->
+            <div class="exp-list-panel">
+                <div id="exp-list"></div>
+            </div>
+
+            <!-- Légende -->
+            <div class="exp-legend">
+                <div class="exp-legend-item">
+                    <div class="exp-legend-dot" style="background:#00aa55;"></div> Stage
+                </div>
+                <div class="exp-legend-item">
+                    <div class="exp-legend-dot" style="background:#3a86ff;"></div> Bénévole
+                </div>
+                <div class="exp-legend-item">
+                    <div class="exp-legend-dot" style="background:#ff9f1c;"></div> CDD
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="experiences.js"></script>
+    <script>
+        function hamburg() {
+            document.querySelector('.nav-container .links').classList.toggle('active');
+        }
+        document.querySelectorAll('.nav-container .links a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                document.querySelector('.nav-container .links').classList.remove('active');
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            initExpMap();
+        });
+    </script>
+</body>
+</html>
