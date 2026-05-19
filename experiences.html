@@ -27,6 +27,12 @@
         </div>
     </nav>
 
+    <div class="wip-banner" id="wip-banner">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Cette page est en cours de développement — des améliorations arrivent prochainement.
+        <button class="wip-close" onclick="closeWip()" aria-label="Fermer">&times;</button>
+    </div>
+
     <div class="exp-page">
         <!-- Carte Leaflet -->
         <div class="exp-map-wrapper">
@@ -83,7 +89,21 @@
                 document.querySelector('.nav-container .links').classList.remove('active');
             });
         });
+        function closeWip() {
+            var banner = document.getElementById('wip-banner');
+            var page   = document.querySelector('.exp-page');
+            banner.style.display = 'none';
+            page.style.top = '10vh';
+            page.style.height = '90vh';
+            if (expMap) expMap.invalidateSize();
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
+            var banner = document.getElementById('wip-banner');
+            var page   = document.querySelector('.exp-page');
+            var h = banner.offsetHeight;
+            page.style.top    = 'calc(10vh + ' + h + 'px)';
+            page.style.height = 'calc(90vh - ' + h + 'px)';
             initExpMap();
         });
     </script>

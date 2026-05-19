@@ -35,6 +35,61 @@ body {
     }
 }
 
+/* ─── Bannière "en cours de développement" ───────────────────────────────────── */
+
+.wip-banner {
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: linear-gradient(90deg, #ff9f1c, #ffb347);
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 10px 50px 10px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(255, 159, 28, 0.35);
+    animation: wipSlideDown 0.4s ease forwards;
+}
+
+@keyframes wipSlideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+.wip-banner i {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.wip-close {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 4px;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.wip-close:hover {
+    opacity: 1;
+}
+
+/* Décaler la carte vers le bas quand la bannière est visible */
+.exp-page {
+    transition: top 0.3s ease;
+}
+
 /* ─── Layout principal ───────────────────────────────────────────────────────── */
 
 .exp-page {
