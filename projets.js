@@ -11,15 +11,16 @@ var modalMediaList    = [];
 var modalCurrentIndex = 0;
 
 function buildModalGallery(mediaList) {
+    var thumbwrap  = document.getElementById('modal-thumbwrap');
     var thumbstrip = document.getElementById('modal-thumbstrip');
     var viewer     = document.getElementById('modal-viewer');
     thumbstrip.innerHTML = '';
     viewer.innerHTML     = '';
 
     if (mediaList.length <= 1) {
-        thumbstrip.style.display = 'none';
+        thumbwrap.style.display = 'none';
     } else {
-        thumbstrip.style.display = 'flex';
+        thumbwrap.style.display = 'flex';
         mediaList.forEach(function(item, i) {
             var thumb = document.createElement('div');
             thumb.className = 'modal-thumb' + (i === 0 ? ' active' : '');
@@ -57,6 +58,10 @@ function selectModalMedia(index) {
     document.querySelectorAll('.modal-thumb').forEach(function(t, i) {
         t.classList.toggle('active', i === index);
     });
+
+    // Scroll the active thumb into view
+    var activThumb = document.querySelector('.modal-thumb.active');
+    if (activThumb) activThumb.scrollIntoView({ inline: 'nearest', behavior: 'smooth' });
 }
 
 // Card click events
@@ -74,10 +79,10 @@ document.querySelectorAll('.card').forEach(function(card) {
         var linkEl = document.getElementById('modal-link');
         linkEl.innerHTML = '';
         if (link) {
-            var btn    = document.createElement('a');
-            btn.href   = link;
-            btn.target = '_blank';
-            btn.className  = 'btn';
+            var btn     = document.createElement('a');
+            btn.href    = link;
+            btn.target  = '_blank';
+            btn.className   = 'btn';
             btn.textContent = 'Voir le site';
             linkEl.appendChild(btn);
         }
@@ -102,12 +107,19 @@ document.querySelectorAll('.card').forEach(function(card) {
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
     document.body.style.overflow = 'auto';
-    var viewer = document.getElementById('modal-viewer');
-    viewer.innerHTML = '';
+    document.getElementById('modal-viewer').innerHTML = '';
 }
 
 document.getElementById('modal').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
+});
+
+// Thumbnail strip scroll buttons
+document.getElementById('thumb-prev').addEventListener('click', function() {
+    document.getElementById('modal-thumbstrip').scrollBy({ left: -200, behavior: 'smooth' });
+});
+document.getElementById('thumb-next').addEventListener('click', function() {
+    document.getElementById('modal-thumbstrip').scrollBy({ left: 200, behavior: 'smooth' });
 });
 
 // Hamburger menu — overrides script.js version for this page
