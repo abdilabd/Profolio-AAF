@@ -3,82 +3,69 @@
 var experiences = [
     {
         id: 0,
-        titre: "Stage — Analyste SIG & Données Foncières",
-        organisme: "ONEAD",
-        lieu: "Djibouti",
-        periode: "Fév – Avr 2022 · 3 mois",
-        type: "stage",
-        logo: "logo/onead.jpeg",
-        description: "Analyse et structuration de bases de données foncières au sein de l'Office National de l'Eau et de l'Assainissement de Djibouti. Création de couches SIG, contrôle qualité des données et production de cartographies thématiques.",
-        coords: [11.5893, 43.1450]
+        titre: "CDD — Ingénieur d'étude en Géomatique",
+        organisme: "INTERACT – UniLaSalle",
+        lieu: "Beauvais, France",
+        periode: "Jan – Juil 2026 · 7 mois",
+        type: "cdd",
+        logo: "logo/unilasalle.png",
+        description: "Poste d'ingénieur d'étude en géomatique en contrat à durée déterminée au sein d'INTERACT – UniLaSalle Beauvais. Conception et développement d'outils SIG, gestion et traitement de bases de données spatiales, production de cartographies thématiques et contribution à des projets de recherche appliquée.",
+        coords: [49.4193, 2.0792]
     },
     {
         id: 1,
-        titre: "Stage — Cartographe & Analyste Spatial",
-        organisme: "DDCF Djibouti",
-        lieu: "Djibouti",
-        periode: "Juin – Août 2022 · 3 mois",
+        titre: "Stage — Géomaticien",
+        organisme: "INTERACT – UniLaSalle",
+        lieu: "Beauvais, France",
+        periode: "Fév – Juil 2025 · 6 mois",
         type: "stage",
-        logo: "logo/ddcf.png",
-        description: "Réalisation de cartes thématiques et d'analyses spatiales pour la Direction des Domaines et du Cadastre Foncier. Traitement de données géographiques et production de rapports cartographiques.",
-        coords: [11.5818, 43.1480]
+        logo: "logo/unilasalle.png",
+        description: "Stage de géomaticien au sein d'INTERACT – UniLaSalle Beauvais. Développement d'applications SIG, traitement de données géospatiales et contribution à des projets de géomatique appliquée à la dynamique territoriale.",
+        coords: [49.4180, 2.0810]
     },
     {
         id: 2,
-        titre: "Stage — Géomaticien Environnement",
+        titre: "Stage — Géomaticien Analyste des données",
         organisme: "ORREC / CERD",
         lieu: "Djibouti",
-        periode: "Jan – Mar 2023 · 3 mois",
+        periode: "Avr – Juil 2024 · 4 mois",
         type: "stage",
         logo: "logo/orrec.jpeg",
-        description: "Travaux de géomatique appliquée à l'environnement au sein du Centre d'Étude et de Recherche de Djibouti. Traitement d'images satellitaires, analyse de l'occupation des sols et suivi diachronique des dynamiques environnementales.",
+        description: "Stage de géomaticien axé sur l'analyse des données environnementales au sein de l'Observatoire Régional de la Recherche pour l'Environnement et le Climat (ORREC – CERD). Traitement d'images satellitaires, analyse de l'occupation des sols et suivi des dynamiques environnementales.",
         coords: [11.5150, 43.1700]
     },
     {
         id: 3,
-        titre: "Stage — Géomatique & Aménagement du territoire",
-        organisme: "UniLaSalle Beauvais",
-        lieu: "Beauvais, France",
-        periode: "Avr – Juin 2024 · 3 mois",
+        titre: "Stage — Géomaticien, Développement et gestion SIG",
+        organisme: "DDCF Djibouti",
+        lieu: "Djibouti",
+        periode: "Mai – Juil 2022 · 3 mois",
         type: "stage",
-        logo: "logo/unilasalle.png",
-        description: "Stage de fin d'études en géomatique appliquée à la dynamique territoriale. Conception d'outils SIG pour l'analyse du territoire, développement d'applications cartographiques web et contribution à des projets d'aménagement durable.",
-        coords: [49.4193, 2.0792]
+        logo: "logo/ddcf.png",
+        description: "Stage axé sur le développement et la gestion de systèmes d'information géographique à la Direction des Domaines et de la Conservation Foncière de Djibouti. Structuration de bases de données foncières, création de couches SIG et production de cartographies thématiques.",
+        coords: [11.5818, 43.1480]
     },
     {
         id: 4,
-        titre: "Bénévole — Développeur SIG Web",
-        organisme: "GEOHORN",
-        lieu: "Beauvais, France",
-        periode: "Sep 2024 – Fév 2025 · 6 mois",
-        type: "benevole",
-        logo: "logo/geohorn.png",
-        description: "Contribution bénévole au développement de solutions SIG web pour l'association GEOHORN. Conception et déploiement d'applications cartographiques interactives, intégration de données géospatiales open data.",
-        coords: [49.4309, 2.0856]
-    },
-    {
-        id: 5,
-        titre: "CDD — Géomaticien & Chargé de données",
-        organisme: "UniLaSalle Beauvais",
-        lieu: "Beauvais, France",
-        periode: "Mar – Août 2025 · 6 mois",
-        type: "cdd",
-        logo: "logo/unilasalle.png",
-        description: "Poste de géomaticien en contrat à durée déterminée au sein d'UniLaSalle Beauvais. Gestion et traitement de bases de données spatiales, production de cartographies thématiques, développement d'outils d'aide à la décision territoriale.",
-        coords: [49.4180, 2.0810]
+        titre: "Stage — Géomaticien Cartographe",
+        organisme: "ONEAD",
+        lieu: "Djibouti",
+        periode: "Mai – Juil 2019 · 3 mois",
+        type: "stage",
+        logo: "logo/onead.jpeg",
+        description: "Stage de cartographe au sein de l'Office National de l'Eau et de l'Assainissement de Djibouti. Contribution à la réalisation de cartes thématiques et à l'analyse géospatiale des données relatives aux réseaux d'eau et d'assainissement.",
+        coords: [11.5893, 43.1450]
     }
 ];
 
 var typeColors = {
-    stage:    "#00aa55",
-    benevole: "#3a86ff",
-    cdd:      "#ff9f1c"
+    stage: "#00aa55",
+    cdd:   "#ff9f1c"
 };
 
 var typeLabels = {
-    stage:    "Stage",
-    benevole: "Bénévole",
-    cdd:      "CDD"
+    stage: "Stage",
+    cdd:   "CDD"
 };
 
 // ─── État de la carte ─────────────────────────────────────────────────────────
