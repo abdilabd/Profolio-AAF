@@ -10,58 +10,45 @@ var slides = {
 var modalMediaList    = [];
 var modalCurrentIndex = 0;
 
-function buildModalGallery(mediaList) {
-    var thumbwrap  = document.getElementById('modal-thumbwrap');
-    var thumbstrip = document.getElementById('modal-thumbstrip');
-    var viewer     = document.getElementById('modal-viewer');
-    thumbstrip.innerHTML = '';
-    viewer.innerHTML     = '';
-
-    if (mediaList.length <= 1) {
-        thumbwrap.style.display = 'none';
-    } else {
-        thumbwrap.style.display = 'flex';
-        mediaList.forEach(function(item, i) {
-            var thumb = document.createElement('div');
-            thumb.className = 'modal-thumb' + (i === 0 ? ' active' : '');
-            if (item.type === 'video') {
-                thumb.innerHTML = '<div class="modal-thumb-video"><i class="fa-solid fa-play"></i></div>';
-            } else {
-                thumb.innerHTML = '<img src="' + item.src + '" alt="">';
-            }
-            thumb.addEventListener('click', function() { selectModalMedia(i); });
-            thumbstrip.appendChild(thumb);
-        });
-    }
-
-    selectModalMedia(0);
-}
-
-function selectModalMedia(index) {
+function showMedia(index) {
     modalCurrentIndex = index;
-    var item   = modalMediaList[index];
-    var viewer = document.getElementById('modal-viewer');
-    viewer.innerHTML = '';
+    var item    = modalMediaList[index];
+    var total   = modalMediaList.length;
+    var wrap    = document.getElementById('modal-img-wrap');
+    var counter = document.getElementById('modal-counter');
+    var prev    = document.getElementById('modal-prev');
+    var next    = document.getElementById('modal-next');
+
+    wrap.innerHTML = '';
 
     if (item.type === 'video') {
         var video = document.createElement('video');
         video.controls = true;
         video.innerHTML = '<source src="' + item.src + '" type="video/mp4">';
-        viewer.appendChild(video);
+        wrap.style.cursor = 'default';
+        wrap.appendChild(video);
     } else {
         var img = document.createElement('img');
         img.src = item.src;
         img.alt = '';
-        viewer.appendChild(img);
+        wrap.style.cursor = 'zoom-in';
+        img.addEventListener('click', function() { openFullscreen(item.src); });
+        wrap.appendChild(img);
     }
 
-    document.querySelectorAll('.modal-thumb').forEach(function(t, i) {
-        t.classList.toggle('active', i === index);
-    });
+    counter.textContent  = total > 1 ? (index + 1) + ' / ' + total : '';
+    prev.style.display   = total > 1 ? 'flex' : 'none';
+    next.style.display   = total > 1 ? 'flex' : 'none';
+}
 
-    // Scroll the active thumb into view
-    var activThumb = document.querySelector('.modal-thumb.active');
-    if (activThumb) activThumb.scrollIntoView({ inline: 'nearest', behavior: 'smooth' });
+function openFullscreen(src) {
+    document.getElementById('fullscreen-img').src = src;
+    document.getElementById('fullscreen-overlay').style.display = 'flex';
+}
+
+function closeFullscreen() {
+    document.getElementById('fullscreen-overlay').style.display = 'none';
+    document.getElementById('fullscreen-img').src = '';
 }
 
 // Card click events
@@ -89,37 +76,53 @@ document.querySelectorAll('.card').forEach(function(card) {
 
         modalMediaList = [];
         if (type === 'video') {
-            var videoSrc   = this.querySelector('video source').getAttribute('src');
-            modalMediaList = [{ type: 'video', src: videoSrc }];
+            var src = this.querySelector('video source').getAttribute('src');
+            modalMediaList = [{ type: 'video', src: src }];
         } else if (type === 'image') {
-            var imgList    = (category && slides[category]) ? slides[category]
-                           : [this.style.backgroundImage.replace(/url\(["']?/, '').replace(/["']?\)$/, '')];
-            modalMediaList = imgList.map(function(src) { return { type: 'image', src: src }; });
+            var list = (category && slides[category]) ? slides[category]
+                     : [this.style.backgroundImage.replace(/url\(["']?/, '').replace(/["']?\)$/, '')];
+            modalMediaList = list.map(function(s) { return { type: 'image', src: s }; });
         }
 
-        buildModalGallery(modalMediaList);
-
+        showMedia(0);
         document.getElementById('modal').style.display = 'flex';
         document.body.style.overflow = 'hidden';
     });
 });
 
+document.getElementById('modal-prev').addEventListener('click', function(e) {
+    e.stopPropagation();
+    showMedia((modalCurrentIndex - 1 + modalMediaList.length) % modalMediaList.length);
+});
+
+document.getElementById('modal-next').addEventListener('click', function(e) {
+    e.stopPropagation();
+    showMedia((modalCurrentIndex + 1) % modalMediaList.length);
+});
+
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
     document.body.style.overflow = 'auto';
-    document.getElementById('modal-viewer').innerHTML = '';
+    document.getElementById('modal-img-wrap').innerHTML = '';
 }
 
 document.getElementById('modal').addEventListener('click', function(e) {
     if (e.target === this) closeModal();
 });
 
-// Thumbnail strip scroll buttons
-document.getElementById('thumb-prev').addEventListener('click', function() {
-    document.getElementById('modal-thumbstrip').scrollBy({ left: -200, behavior: 'smooth' });
-});
-document.getElementById('thumb-next').addEventListener('click', function() {
-    document.getElementById('modal-thumbstrip').scrollBy({ left: 200, behavior: 'smooth' });
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        if (document.getElementById('fullscreen-overlay').style.display === 'flex') {
+            closeFullscreen();
+        } else {
+            closeModal();
+        }
+    }
+    if (document.getElementById('modal').style.display === 'flex' && modalMediaList.length > 1) {
+        if (e.key === 'ArrowLeft')  showMedia((modalCurrentIndex - 1 + modalMediaList.length) % modalMediaList.length);
+        if (e.key === 'ArrowRight') showMedia((modalCurrentIndex + 1) % modalMediaList.length);
+    }
 });
 
 // Hamburger menu — overrides script.js version for this page

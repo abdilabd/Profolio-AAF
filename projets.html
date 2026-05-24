@@ -75,19 +75,25 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span id="modal-title-text" class="modal-title"></span>
+                <span id="modal-counter" class="modal-counter"></span>
                 <button class="modal-close" onclick="closeModal()">&#x2715;</button>
             </div>
-            <div class="modal-viewer" id="modal-viewer"></div>
-            <div class="modal-thumbwrap" id="modal-thumbwrap">
-                <button class="thumb-nav thumb-prev" id="thumb-prev">&#8249;</button>
-                <div class="modal-thumbstrip" id="modal-thumbstrip"></div>
-                <button class="thumb-nav thumb-next" id="thumb-next">&#8250;</button>
+            <div class="modal-viewer" id="modal-viewer">
+                <button class="modal-nav modal-prev" id="modal-prev">&#8249;</button>
+                <div class="modal-img-wrap" id="modal-img-wrap"></div>
+                <button class="modal-nav modal-next" id="modal-next">&#8250;</button>
             </div>
             <div class="modal-footer">
                 <p id="modal-text"></p>
                 <div id="modal-link"></div>
             </div>
         </div>
+    </div>
+
+    <!-- Plein écran -->
+    <div id="fullscreen-overlay" onclick="closeFullscreen()">
+        <button id="fullscreen-close" onclick="event.stopPropagation(); closeFullscreen()">&#x2715;</button>
+        <img id="fullscreen-img" src="" alt="">
     </div>
     
     <script src="script.js"></script>
