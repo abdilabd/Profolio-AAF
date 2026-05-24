@@ -14,6 +14,17 @@ var experiences = [
     },
     {
         id: 1,
+        titre: "Bénévole — Développeur SIG Web",
+        organisme: "GEOHORN",
+        lieu: "Beauvais, France",
+        periode: "Oct – Déc 2025 · 3 mois",
+        type: "benevole",
+        logo: "logo/geohorn.png",
+        description: "Contribution bénévole au développement de solutions SIG web pour l'association GEOHORN. Conception et déploiement d'applications cartographiques interactives, intégration de données géospatiales open data.",
+        coords: [49.4309, 2.0856]
+    },
+    {
+        id: 2,
         titre: "Stage — Géomaticien",
         organisme: "INTERACT – UniLaSalle",
         lieu: "Beauvais, France",
@@ -24,7 +35,7 @@ var experiences = [
         coords: [49.4180, 2.0810]
     },
     {
-        id: 2,
+        id: 3,
         titre: "Stage — Géomaticien Analyste des données",
         organisme: "ORREC / CERD",
         lieu: "Djibouti",
@@ -35,7 +46,7 @@ var experiences = [
         coords: [11.5150, 43.1700]
     },
     {
-        id: 3,
+        id: 4,
         titre: "Stage — Géomaticien, Développement et gestion SIG",
         organisme: "DDCF Djibouti",
         lieu: "Djibouti",
@@ -46,7 +57,7 @@ var experiences = [
         coords: [11.5818, 43.1480]
     },
     {
-        id: 4,
+        id: 5,
         titre: "Stage — Géomaticien Cartographe",
         organisme: "ONEAD",
         lieu: "Djibouti",
@@ -59,13 +70,15 @@ var experiences = [
 ];
 
 var typeColors = {
-    stage: "#00aa55",
-    cdd:   "#ff9f1c"
+    stage:    "#00aa55",
+    benevole: "#3a86ff",
+    cdd:      "#ff9f1c"
 };
 
 var typeLabels = {
-    stage: "Stage",
-    cdd:   "CDD"
+    stage:    "Stage",
+    benevole: "Bénévole",
+    cdd:      "CDD"
 };
 
 // ─── État de la carte ─────────────────────────────────────────────────────────
