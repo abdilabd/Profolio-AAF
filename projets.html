@@ -70,12 +70,19 @@
         </div>
     </div>
     
-    <!-- Modal pour afficher le texte -->
+    <!-- Modal -->
     <div id="modal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <p id="modal-text"></p>
-            <div id="modal-media"></div>
+            <div class="modal-header">
+                <span id="modal-title-text" class="modal-title"></span>
+                <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+            </div>
+            <div class="modal-viewer" id="modal-viewer"></div>
+            <div class="modal-thumbstrip" id="modal-thumbstrip"></div>
+            <div class="modal-footer">
+                <p id="modal-text"></p>
+                <div id="modal-link"></div>
+            </div>
         </div>
     </div>
     
