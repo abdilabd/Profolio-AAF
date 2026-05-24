@@ -10,14 +10,47 @@ var slides = {
 var modalMediaList    = [];
 var modalCurrentIndex = 0;
 
+// Build thumbnail strip
+function buildThumbs(mediaList) {
+    var thumbwrap  = document.getElementById('modal-thumbwrap');
+    var thumbstrip = document.getElementById('modal-thumbstrip');
+    thumbstrip.innerHTML = '';
+
+    if (mediaList.length <= 1) {
+        thumbwrap.style.display = 'none';
+        return;
+    }
+
+    thumbwrap.style.display = 'flex';
+    mediaList.forEach(function(item, i) {
+        var thumb = document.createElement('div');
+        thumb.className = 'modal-thumb' + (i === 0 ? ' active' : '');
+        if (item.type === 'video') {
+            thumb.innerHTML = '<div class="modal-thumb-video"><i class="fa-solid fa-play"></i></div>';
+        } else {
+            thumb.innerHTML = '<img src="' + item.src + '" alt="">';
+        }
+        thumb.addEventListener('click', function() { showMedia(i); });
+        thumbstrip.appendChild(thumb);
+    });
+}
+
+// Update active thumbnail highlight
+function updateThumbActive(index) {
+    document.querySelectorAll('.modal-thumb').forEach(function(t, i) {
+        t.classList.toggle('active', i === index);
+    });
+    var active = document.querySelector('.modal-thumb.active');
+    if (active) active.scrollIntoView({ inline: 'nearest', behavior: 'smooth' });
+}
+
+// Show media at index in the viewer
 function showMedia(index) {
     modalCurrentIndex = index;
     var item    = modalMediaList[index];
     var total   = modalMediaList.length;
     var wrap    = document.getElementById('modal-img-wrap');
     var counter = document.getElementById('modal-counter');
-    var prev    = document.getElementById('modal-prev');
-    var next    = document.getElementById('modal-next');
 
     wrap.innerHTML = '';
 
@@ -36,9 +69,11 @@ function showMedia(index) {
         wrap.appendChild(img);
     }
 
-    counter.textContent  = total > 1 ? (index + 1) + ' / ' + total : '';
-    prev.style.display   = total > 1 ? 'flex' : 'none';
-    next.style.display   = total > 1 ? 'flex' : 'none';
+    counter.textContent = total > 1 ? (index + 1) + ' / ' + total : '';
+    document.getElementById('modal-prev').style.display = total > 1 ? 'flex' : 'none';
+    document.getElementById('modal-next').style.display = total > 1 ? 'flex' : 'none';
+
+    updateThumbActive(index);
 }
 
 function openFullscreen(src) {
@@ -84,12 +119,14 @@ document.querySelectorAll('.card').forEach(function(card) {
             modalMediaList = list.map(function(s) { return { type: 'image', src: s }; });
         }
 
+        buildThumbs(modalMediaList);
         showMedia(0);
         document.getElementById('modal').style.display = 'flex';
         document.body.style.overflow = 'hidden';
     });
 });
 
+// Navigation arrows on the viewer
 document.getElementById('modal-prev').addEventListener('click', function(e) {
     e.stopPropagation();
     showMedia((modalCurrentIndex - 1 + modalMediaList.length) % modalMediaList.length);
@@ -98,6 +135,14 @@ document.getElementById('modal-prev').addEventListener('click', function(e) {
 document.getElementById('modal-next').addEventListener('click', function(e) {
     e.stopPropagation();
     showMedia((modalCurrentIndex + 1) % modalMediaList.length);
+});
+
+// Thumbnail strip scroll buttons
+document.getElementById('thumb-prev').addEventListener('click', function() {
+    document.getElementById('modal-thumbstrip').scrollBy({ left: -200, behavior: 'smooth' });
+});
+document.getElementById('thumb-next').addEventListener('click', function() {
+    document.getElementById('modal-thumbstrip').scrollBy({ left: 200, behavior: 'smooth' });
 });
 
 function closeModal() {
