@@ -5,6 +5,41 @@ addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30),{pa
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));document.querySelector('#year').textContent=new Date().getFullYear();
 
+const consentBanner=document.querySelector('#consent-banner');
+const analyticsSettings=document.querySelector('#analytics-settings');
+function getAnalyticsConsent(){try{return localStorage.getItem('portfolio-analytics-consent')}catch(error){return null}}
+function setAnalyticsConsent(value){
+  try{localStorage.setItem('portfolio-analytics-consent',value)}catch(error){}
+  consentBanner.hidden=true;
+  if(value==='accepted')window.loadPortfolioAnalytics();
+  else if(typeof gtag==='function')gtag('consent','update',{analytics_storage:'denied'});
+}
+if(!getAnalyticsConsent())consentBanner.hidden=false;
+consentBanner.querySelectorAll('[data-consent]').forEach(button=>button.addEventListener('click',()=>setAnalyticsConsent(button.dataset.consent)));
+analyticsSettings.addEventListener('click',()=>{consentBanner.hidden=false});
+
+function trackPortfolioEvent(name,parameters={}){
+  if(getAnalyticsConsent()==='accepted'&&typeof gtag==='function')gtag('event',name,parameters);
+}
+const viewedSections=new Set();
+const analyticsObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting&&!viewedSections.has(entry.target.id)){
+    viewedSections.add(entry.target.id);
+    trackPortfolioEvent('section_view',{section_name:entry.target.id});
+  }
+}),{threshold:.5});
+document.querySelectorAll('main>section[id]').forEach(section=>analyticsObserver.observe(section));
+document.addEventListener('click',event=>{
+  const galleryButton=event.target.closest('[data-gallery]');
+  if(galleryButton)trackPortfolioEvent('gallery_open',{gallery_name:galleryButton.dataset.gallery});
+  const categoryButton=event.target.closest('[data-open-category]');
+  if(categoryButton)trackPortfolioEvent('category_open',{category_name:categoryButton.dataset.openCategory});
+  const link=event.target.closest('a[href]');
+  if(!link)return;
+  if(link.href.startsWith('mailto:')||link.href.startsWith('tel:'))trackPortfolioEvent('contact_click',{contact_type:link.protocol.replace(':','')});
+  else if(link.origin!==location.origin)trackPortfolioEvent('outbound_click',{link_url:link.href,link_text:link.textContent.trim().slice(0,100)});
+});
+
 const experienceMap=document.querySelector('#experience-map');
 if(experienceMap&&window.L){
   const places=[
@@ -204,10 +239,11 @@ projectGalleries['static-maps']={
 projectGalleries['interactive-maps']={
   category:'Cartes interactives',
   title:'Sélection de cartes interactives',
-  tags:['Leaflet','Webmapping','Exploration des données'],
+  tags:['Leaflet','Webmapping','Analyse spatiale'],
   slides:[
-    {iframe:'https://abdilabd.github.io/carte-douaisis-agglo/',url:'https://abdilabd.github.io/carte-douaisis-agglo/',title:'Réseau hydrographique — Douaisis Agglo',label:'Carte interactive 1 sur 2',description:'Cette carte interactive permet de structurer et de valoriser le réseau hydrographique afin de faciliter le suivi des tronçons et la préparation des interventions. Elle permet d’explorer 1 687 tronçons par commune, bassin versant, nature et largeur.'},
-    {src:'images/image0.png',url:'https://abdilabd.github.io/Webmapping/',title:'Densité de population — Rouen',label:'Carte interactive 2 sur 2',description:'Cette carte permet d’explorer la répartition de la population et de faire ressortir les contrastes spatiaux à l’échelle du territoire rouennais.'}
+    {iframe:'https://abdilabd.github.io/carte-douaisis-agglo/',url:'https://abdilabd.github.io/carte-douaisis-agglo/',title:'Réseau hydrographique — Douaisis Agglo',label:'Carte interactive 1 sur 3',description:'Cette carte interactive permet de structurer et de valoriser le réseau hydrographique afin de faciliter le suivi des tronçons et la préparation des interventions. Elle permet d’explorer 1 687 tronçons par commune, bassin versant, nature et largeur.'},
+    {iframe:'https://abdilabd.github.io/Digital-Soil-Mapping/',url:'https://abdilabd.github.io/Digital-Soil-Mapping/',title:'Cartographie numérique des sols — Oise',label:'Carte interactive 2 sur 3',description:'Cette carte interactive présente les résultats d’une cartographie numérique des sols produite à 30 m de résolution par Random Forest et krigeage. Elle permet d’explorer six propriétés — argile, sable, limon, pH, carbone organique et CEC — selon différentes profondeurs du sol.'},
+    {src:'images/image0.png',url:'https://abdilabd.github.io/Webmapping/',title:'Densité de population — Rouen',label:'Carte interactive 3 sur 3',description:'Cette carte permet d’explorer la répartition de la population et de faire ressortir les contrastes spatiaux à l’échelle du territoire rouennais.'}
   ]
 };
 
