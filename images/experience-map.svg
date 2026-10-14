@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-labelledby="title desc">
+  <title id="title">Carte du monde</title>
+  <desc id="desc">Fond cartographique stylisé centré sur l’Europe et l’Afrique.</desc>
+  <defs>
+    <linearGradient id="ocean" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d211b"/>
+      <stop offset="1" stop-color="#07130f"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#9cc8b6" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="520" fill="url(#ocean)"/>
+  <rect width="1000" height="520" fill="url(#grid)"/>
+  <g fill="#25483c" stroke="#4b7566" stroke-width="1.5" stroke-linejoin="round">
+    <path d="M45 92l36-39 73-24 78 12 52 39 42 7 30 43-26 37-43 5-22 40-45 11-36 57-50-10-15-38-43-20-8-47-32-29z"/>
+    <path d="M250 250l35 21 31 42-9 48-27 44-18 69-28 20-26-52 6-53-24-34 15-54z"/>
+    <path d="M430 68l40-25 52 9 28 28 66-10 59 12 66-21 84 17 68 42-12 33-55 12-23 34-50 8-36 49-66 5-28-20-44 3-30-31-54-10-29-36-45-18-13-32z"/>
+    <path d="M482 205l44-15 47 21 35 50 43 36-16 47-31 21-16 69-39 33-30-48-29-51-7-54-28-40 12-36z"/>
+    <path d="M788 363l52-28 57 9 37 37-8 48-45 28-69-17-25-34z"/>
+    <path d="M375 39l25-24 38 2 17 21-28 25-39-5z"/>
+    <path d="M905 174l20-12 26 17-7 24-27 4z"/>
+  </g>
+  <g fill="none" stroke="#7bb99f" stroke-opacity=".22" stroke-width="1">
+    <path d="M0 130h1000M0 260h1000M0 390h1000"/>
+    <path d="M250 0v520M500 0v520M750 0v520"/>
+  </g>
+  <g fill="#7f9f93" font-family="Arial, sans-serif" font-size="13" letter-spacing="2">
+    <text x="506" y="116">EUROPE</text>
+    <text x="517" y="294">AFRIQUE</text>
+    <text x="730" y="129">ASIE</text>
+    <text x="107" y="144">AMÉRIQUE DU NORD</text>
+    <text x="209" y="357">AMÉRIQUE DU SUD</text>
+  </g>
+</svg>

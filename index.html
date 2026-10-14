@@ -4,7 +4,9 @@
 <meta name="description" content="Portfolio d’Abdourazak Farah, géomaticien et analyste de données géographiques.">
 <meta name="theme-color" content="#071310"><title>Abdourazak Farah — Géomaticien & analyste géospatial</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="style.css">
 </head><body>
 <a class="skip" href="#main">Aller au contenu</a>
 <header class="site-header"><a class="brand" href="#accueil"><b>AF</b><span>Abdourazak Farah<small>Géomatique · Data · Territoires</small></span></a>
@@ -43,11 +45,11 @@
  <article class="expertise-card reveal"><b>05 — APPLICATIONS</b><i>◇</i><h3>SIG Web & automatisation</h3><p>Développement d’outils interactifs et de traitements reproductibles pour faciliter l’accès et l’exploitation des données.</p><div class="expertise-focus"><span>Webmapping</span><span>Tableaux de bord</span><span>Scripts de traitement</span></div><ul><li>Leaflet</li><li>Lizmap</li><li>R Shiny</li><li>Python</li></ul></article>
 </div></section>
 <section class="section projects" id="projets">
- <div class="section-head reveal"><div><p class="index">03 — RÉALISATIONS</p><h2>Explorez mes réalisations par domaine.</h2></div><p>Cartographie, applications Web SIG et projets : trois façons de mettre les données géographiques en action.</p></div>
+ <div class="section-head reveal"><div><p class="index">03 — RÉALISATIONS</p><h2>Explorez mes réalisations par domaine.</h2></div><p>Des productions conçues pour analyser une situation, répondre à une question et rendre les résultats immédiatement lisibles.</p></div>
  <div class="category-view" id="category-view">
   <article class="category-card category-map reveal">
-   <div class="category-media"><img src="images/N2.gif" alt="" loading="lazy"><img src="images/image0.png" alt="" loading="lazy"></div>
-   <div class="category-overlay"><span>01</span><div><small>2 réalisations</small><h3>Cartographie</h3><p>Productions statiques et cartes interactives conçues pour rendre les données lisibles.</p></div><button type="button" data-open-category="cartographie">Découvrir <b>↗</b></button></div>
+   <div class="category-media"><img src="images/portfolio-gallery/horn-ndvi.gif" alt="" loading="lazy"><img src="images/portfolio-gallery/normandy-night.webp" alt="" loading="lazy"></div>
+   <div class="category-overlay"><span>01</span><div><small>3 collections</small><h3>Cartographie</h3><p>Cartes interactives, productions statiques et animations cartographiques.</p></div><button type="button" data-open-category="cartographie">Découvrir <b>↗</b></button></div>
   </article>
   <article class="category-card category-web reveal">
    <div class="category-media"><img src="images/image16.png" alt="" loading="lazy"><img src="images/image37.png" alt="" loading="lazy"></div>
@@ -55,38 +57,59 @@
   </article>
   <article class="category-card category-study reveal">
    <div class="category-media"><img src="images/image30.png" alt="" loading="lazy"><img src="images/image31.png" alt="" loading="lazy"></div>
-   <div class="category-overlay"><span>03</span><div><small>2 réalisations</small><h3>Projets</h3><p>Études et démarches collaboratives répondant à des problématiques concrètes.</p></div><button type="button" data-open-category="projets">Découvrir <b>↗</b></button></div>
+   <div class="category-overlay"><span>03</span><div><small>4 réalisations</small><h3>Projets</h3><p>Études, scénarios d’aménagement et démarches collaboratives illustrés étape par étape.</p></div><button type="button" data-open-category="projets">Découvrir <b>↗</b></button></div>
   </article>
  </div>
  <div class="catalog-view" id="catalog-view" hidden>
   <div class="catalog-heading"><button class="catalog-back" id="catalog-back" type="button">← Catégories</button><div><p class="index">CATALOGUE</p><h3 id="catalog-title">Toutes les réalisations</h3></div></div>
-  <div class="catalog-toolbar">
-   <label class="catalog-search"><span>⌕</span><input id="project-search" type="search" placeholder="Rechercher une réalisation" autocomplete="off"></label>
-   <label class="catalog-select"><span class="sr-only">Filtrer par catégorie</span><select id="project-category"><option value="all">Toutes les catégories</option><option value="cartographie">Cartographie</option><option value="websig">Applications Web SIG</option><option value="projets">Projets</option></select></label>
-   <button class="catalog-reset" id="catalog-reset" type="button">↻ Réinitialiser</button>
+  <div class="catalog-filters" aria-label="Filtrer les réalisations">
+   <button type="button" data-filter-category="all" aria-pressed="true">Toutes</button>
+   <button type="button" data-filter-category="cartographie" aria-pressed="false">Cartographie</button>
+   <button type="button" data-filter-category="websig" aria-pressed="false">Applications Web SIG</button>
+   <button type="button" data-filter-category="projets" aria-pressed="false">Projets</button>
   </div>
-  <div class="catalog-summary"><strong><span id="project-count">6</span> réalisations</strong><span>3 catégories</span></div>
+  <div class="catalog-summary"><strong><span id="project-count">9</span> réalisations</strong><span>3 catégories</span></div>
   <div class="catalog-grid" id="catalog-grid">
-   <article class="production-card" data-category="cartographie" data-search="densité population rouen métropole leaflet open data cartographie interactive webmapping">
-    <div class="production-media"><img src="images/image0.png" alt="Carte interactive de densité de population à Rouen" loading="lazy"><span>Cartographie interactive</span></div><div class="production-body"><small>Cartographie</small><h4>Densité de population — Rouen Métropole</h4><p>Visualisation interactive de la densité de population en 2022 et des contrastes territoriaux.</p><div class="production-tags"><span>Leaflet</span><span>Open Data</span></div><a href="https://abdilabd.github.io/Webmapping/" target="_blank" rel="noopener">Voir la réalisation ↗</a></div>
+   <article class="production-card" data-category="cartographie">
+    <div class="production-media"><img src="images/image0.png" alt="Carte interactive de densité de population à Rouen" loading="lazy"><span>Carte interactive</span></div><div class="production-body"><small>Cartographie</small><h4>Cartes interactives</h4><p>Des interfaces cartographiques conçues pour explorer les données et révéler les contrastes territoriaux.</p><div class="production-tags"><span>Leaflet</span><span>Webmapping</span></div><a href="https://abdilabd.github.io/Webmapping/" target="_blank" rel="noopener">Explorer la carte ↗</a></div>
    </article>
-   <article class="production-card" data-category="cartographie" data-search="réalisations cartographiques cartes statiques qgis arcgis sémiologie">
-    <div class="production-media"><img src="images/N2.gif" alt="Exemple de réalisation cartographique" loading="lazy"><span>Cartographie statique</span></div><div class="production-body"><small>Cartographie</small><h4>Réalisations cartographiques</h4><p>Productions thématiques répondant à différents enjeux territoriaux et environnementaux.</p><div class="production-tags"><span>QGIS</span><span>ArcGIS</span><span>Sémiologie</span></div></div>
+   <article class="production-card" data-category="cartographie">
+    <div class="production-media"><img src="images/portfolio-gallery/normandy-night.webp" alt="Aperçu des cartes statiques" loading="lazy"><span>Cartes statiques</span></div><div class="production-body"><small>Cartographie</small><h4>Cartes statiques</h4><p>Des productions thématiques consacrées aux territoires, aux dynamiques démographiques, aux risques et à l’environnement.</p><div class="production-tags"><span>QGIS</span><span>ArcGIS Pro</span></div><button class="open-gallery" type="button" data-gallery="static-maps">Voir les 10 cartes <b>↗</b></button></div>
+   </article>
+   <article class="production-card" data-category="cartographie">
+    <div class="production-media"><img src="images/portfolio-gallery/horn-ndvi.gif" alt="Aperçu d’une animation cartographique" loading="lazy"><span>GIF cartographiques</span></div><div class="production-body"><small>Cartographie</small><h4>Cartes animées</h4><p>Des animations pour suivre une évolution dans le temps et rendre visibles les transformations spatiales.</p><div class="production-tags"><span>GIF</span><span>Analyse temporelle</span></div><button class="open-gallery" type="button" data-gallery="animated-maps">Voir les 2 animations <b>↗</b></button></div>
    </article>
    <article class="production-card" data-category="websig" data-search="occupation sols r shiny beauvaisis analyse diachronique application web sig">
-    <div class="production-media"><video src="videos/media1.mp4" muted loop playsinline preload="metadata" aria-label="Aperçu de l’application R Shiny"></video><span>Application d’analyse</span></div><div class="production-body"><small>Applications Web SIG</small><h4>Occupation des sols — R Shiny</h4><p>Exploration des changements d’occupation des sols dans le Beauvaisis entre 2006 et 2012.</p><div class="production-tags"><span>R Shiny</span><span>Analyse diachronique</span></div></div>
+    <div class="production-media"><video src="videos/media1.mp4" muted loop playsinline preload="metadata" aria-label="Aperçu de l’application R Shiny"></video><span>Application d’analyse</span></div><div class="production-body"><small>Applications Web SIG</small><h4>Occupation des sols — R Shiny</h4><p>Rendre comparables les changements d’occupation du sol dans le Beauvaisis entre 2006 et 2012.</p><div class="production-tags"><span>R Shiny</span><span>Analyse diachronique</span></div></div>
    </article>
    <article class="production-card" data-category="websig" data-search="gestion titres fonciers postgis base données spatiale application web sig">
-    <div class="production-media"><img src="images/image16.png" alt="Application SIG de gestion des titres fonciers" loading="lazy"><span>Gestion de données</span></div><div class="production-body"><small>Applications Web SIG</small><h4>Gestion SIG des titres fonciers</h4><p>Centralisation des propriétés foncières, des plans et de leurs informations dans une base spatiale.</p><div class="production-tags"><span>PostGIS</span><span>Foncier</span><span>Web SIG</span></div></div>
+    <div class="production-media"><img src="images/image16.png" alt="Application SIG de gestion des titres fonciers" loading="lazy"><span>Gestion de données</span></div><div class="production-body"><small>Applications Web SIG</small><h4>Gestion SIG des titres fonciers</h4><p>Réunir des plans et informations foncières dispersés pour en simplifier la consultation et la mise à jour.</p><div class="production-tags"><span>PostGIS</span><span>Foncier</span><span>Web SIG</span></div></div>
    </article>
    <article class="production-card" data-category="projets" data-search="datathon normandie patrimoine tourisme open data travail équipe prototype">
-    <div class="production-media"><video src="videos/VID-20241215-WA0002.mp4" muted loop playsinline preload="metadata" aria-label="Aperçu du Datathon Normandie"></video><span>Projet collaboratif</span></div><div class="production-body"><small>Projets</small><h4>Datathon Normandie 2024</h4><p>Prototype numérique exploitant l’open data du patrimoine et du tourisme normand.</p><div class="production-tags"><span>Open Data</span><span>Prototype</span><span>Équipe</span></div><a href="https://kaizer1er.github.io/Datathon/" target="_blank" rel="noopener">Voir la réalisation ↗</a></div>
+    <div class="production-media"><video src="videos/VID-20241215-WA0002.mp4" muted loop playsinline preload="metadata" aria-label="Aperçu du Datathon Normandie"></video><span>Projet collaboratif</span></div><div class="production-body"><small>Projets</small><h4>Datathon Normandie 2024</h4><p>Valoriser les données ouvertes du patrimoine et du tourisme dans un prototype construit en équipe.</p><div class="production-tags"><span>Open Data</span><span>Prototype</span><span>Équipe</span></div><a href="https://kaizer1er.github.io/Datathon/" target="_blank" rel="noopener">Voir la réalisation ↗</a></div>
    </article>
    <article class="production-card" data-category="projets" data-search="aménagement urbain durable écoquartier angers urbanisme analyse multicritère sig">
-    <div class="production-media"><img src="images/image30.png" alt="Projet d’écoquartier durable à Angers" loading="lazy"><span>Aménagement</span></div><div class="production-body"><small>Projets</small><h4>Écoquartier durable — Angers</h4><p>Proposition territoriale fondée sur les documents urbains et les principes du développement durable.</p><div class="production-tags"><span>Urbanisme</span><span>Analyse multicritère</span><span>SIG</span></div></div>
+    <div class="production-media"><img src="images/portfolio-gallery/ecoquartier-04.webp" alt="Plan final du projet d’écoquartier" loading="lazy"><span>Aménagement</span></div><div class="production-body"><small>Projets</small><h4>Écoquartier durable</h4><p>Présenter la construction progressive d’un quartier, de la voirie jusqu’aux logements et équipements.</p><div class="production-tags"><span>Urbanisme</span><span>Phasage</span><span>SIG</span></div><button class="open-gallery" type="button" data-gallery="ecoquartier">Voir les 4 étapes <b>↗</b></button></div>
+   </article>
+   <article class="production-card" data-category="projets" data-search="écoparc parc loisirs paysage aménagement équipements environnement">
+    <div class="production-media"><img src="images/portfolio-gallery/ecopark-04.webp" alt="Plan final du projet d’écoparc" loading="lazy"><span>Conception paysagère</span></div><div class="production-body"><small>Projets</small><h4>Conception d’un écoparc</h4><p>Organiser les circulations, les équipements et les usages d’un espace de loisirs intégré au paysage.</p><div class="production-tags"><span>Aménagement</span><span>Usages</span><span>SIG</span></div><button class="open-gallery" type="button" data-gallery="ecopark">Voir les 4 étapes <b>↗</b></button></div>
+   </article>
+   <article class="production-card" data-category="projets" data-search="services écosystémiques climat télédétection sentinel maroc eurosoil poster recherche">
+    <div class="production-media"><img src="images/portfolio-gallery/ses-poster.webp" alt="Poster scientifique sur les services écosystémiques" loading="lazy"><span>Projet scientifique</span></div><div class="production-body"><small>Projets</small><h4>Services écosystémiques et télédétection</h4><p>Évaluer spatialement un service de régulation climatique à partir de séries temporelles Sentinel-2.</p><div class="production-tags"><span>Sentinel-2</span><span>Analyse temporelle</span></div><button class="open-gallery" type="button" data-gallery="ses">Voir le poster <b>↗</b></button></div>
    </article>
   </div>
   <p class="catalog-empty" id="catalog-empty" hidden>Aucune réalisation ne correspond à votre recherche.</p>
+ </div>
+ <div class="gallery-modal" id="gallery-modal" hidden role="dialog" aria-modal="true" aria-labelledby="gallery-title">
+  <button class="gallery-backdrop" type="button" data-close-gallery aria-label="Fermer la galerie"></button>
+  <div class="gallery-panel">
+   <div class="gallery-top"><div><small id="gallery-category">Réalisation</small><h3 id="gallery-title"></h3></div><button class="gallery-close" type="button" data-close-gallery aria-label="Fermer">×</button></div>
+   <div class="gallery-layout">
+    <div class="gallery-stage"><img id="gallery-image" src="" alt=""><button class="gallery-arrow gallery-prev" type="button" aria-label="Image précédente">←</button><button class="gallery-arrow gallery-next" type="button" aria-label="Image suivante">→</button><span id="gallery-counter"></span></div>
+    <div class="gallery-copy"><p class="gallery-kicker" id="gallery-slide-label"></p><h4 id="gallery-slide-title"></h4><p id="gallery-description"></p><div class="production-tags" id="gallery-tags"></div></div>
+   </div>
+   <div class="gallery-thumbs" id="gallery-thumbs" aria-label="Choisir une image"></div>
+  </div>
  </div>
 </section>
 <section class="section journey" id="parcours"><div class="section-head reveal"><div><p class="index">04 — EXPÉRIENCES</p><h2>Mes expériences professionnelles.</h2></div></div>
@@ -99,4 +122,4 @@
  <article class="reveal"><time>2019</time><div><span>Mai — juillet 2019</span><h3>Géomaticien — Cartographe · Stage</h3><p>Office National de l’Eau et de l’Assainissement de Djibouti</p></div></article>
  </div></div></section>
 <section class="section contact" id="contact"><div class="contact-inner reveal"><p class="index">05 — CONTACT</p><div class="contact-details"><a href="mailto:zakabdillahi22@gmail.com"><small>E-MAIL</small><strong>zakabdillahi22@gmail.com</strong></a><a href="tel:+33652468922"><small>TÉLÉPHONE</small><strong>+33 6 52 46 89 22</strong></a><div><small>LOCALISATION</small><strong>Beauvais, France</strong></div></div><div class="contact-actions"><a class="button light" href="mailto:zakabdillahi22@gmail.com">Écrivez-moi ↗</a><a href="https://www.linkedin.com/in/abdourazak-farah-595b3624a/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/abdilabd" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
-</main><footer><span>© <i id="year"></i> Abdourazak Farah</span><span>Géomaticien · Analyste géospatial</span><a href="#accueil">Retour en haut ↑</a></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="script.js"></script></body></html>
+</main><footer><span>© <i id="year"></i> Abdourazak Farah</span><span>Géomaticien · Analyste géospatial</span><a href="#accueil">Retour en haut ↑</a></footer><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script><script src="script.js"></script></body></html>
