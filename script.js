@@ -201,6 +201,16 @@ projectGalleries['static-maps']={
   ]
 };
 
+projectGalleries['interactive-maps']={
+  category:'Cartes interactives',
+  title:'Sélection de cartes interactives',
+  tags:['Leaflet','Webmapping','Exploration des données'],
+  slides:[
+    {iframe:'https://abdilabd.github.io/carte-douaisis-agglo/',url:'https://abdilabd.github.io/carte-douaisis-agglo/',title:'Réseau hydrographique — Douaisis Agglo',label:'Carte interactive 1 sur 2',description:'Cette carte interactive permet de structurer et de valoriser le réseau hydrographique afin de faciliter le suivi des tronçons et la préparation des interventions. Elle permet d’explorer 1 687 tronçons par commune, bassin versant, nature et largeur.'},
+    {src:'images/image0.png',url:'https://abdilabd.github.io/Webmapping/',title:'Densité de population — Rouen',label:'Carte interactive 2 sur 2',description:'Cette carte permet d’explorer la répartition de la population et de faire ressortir les contrastes spatiaux à l’échelle du territoire rouennais.'}
+  ]
+};
+
 projectGalleries['animated-maps']={
   category:'GIF cartographiques',
   title:'Cartes animées',
@@ -210,6 +220,7 @@ projectGalleries['animated-maps']={
 
 const galleryModal=document.querySelector('#gallery-modal');
 const galleryImage=document.querySelector('#gallery-image');
+const galleryIframe=document.querySelector('#gallery-iframe');
 const galleryTitle=document.querySelector('#gallery-title');
 const galleryCategory=document.querySelector('#gallery-category');
 const gallerySlideLabel=document.querySelector('#gallery-slide-label');
@@ -220,13 +231,26 @@ const galleryTags=document.querySelector('#gallery-tags');
 const galleryThumbs=document.querySelector('#gallery-thumbs');
 const galleryPrev=document.querySelector('.gallery-prev');
 const galleryNext=document.querySelector('.gallery-next');
+const galleryProjectLink=document.querySelector('#gallery-project-link');
 let activeGallery=null,activeSlide=0,galleryTrigger=null;
 
 function renderGallerySlide(index){
   activeSlide=index;
   const slide=activeGallery.slides[index];
-  galleryImage.src=slide.src;
-  galleryImage.alt=slide.title;
+  const isInteractive=Boolean(slide.iframe);
+  galleryImage.hidden=isInteractive;
+  galleryIframe.hidden=!isInteractive;
+  if(isInteractive){
+    galleryImage.src='';
+    galleryIframe.src=slide.iframe;
+    galleryIframe.title='Aperçu de '+slide.title;
+  }else{
+    galleryIframe.src='';
+    galleryImage.src=slide.src;
+    galleryImage.alt=slide.title;
+  }
+  galleryProjectLink.hidden=!slide.url;
+  galleryProjectLink.href=slide.url||'#';
   gallerySlideLabel.textContent=slide.label;
   gallerySlideTitle.textContent=slide.title;
   galleryDescription.textContent=slide.description;
@@ -249,7 +273,7 @@ function openGallery(id,trigger){
     button.className='gallery-thumb';
     button.type='button';
     button.setAttribute('aria-label','Afficher '+slide.title);
-    button.innerHTML='<img src="'+slide.src+'" alt="">';
+    button.innerHTML=slide.src?'<img src="'+slide.src+'" alt="">':'<span>'+String(index+1).padStart(2,'0')+'<b>'+slide.title+'</b></span>';
     button.addEventListener('click',()=>renderGallerySlide(index));
     galleryThumbs.append(button);
   });
@@ -263,6 +287,7 @@ function closeGallery(){
   galleryModal.hidden=true;
   document.body.classList.remove('gallery-open');
   galleryImage.src='';
+  galleryIframe.src='';
   if(galleryTrigger)galleryTrigger.focus();
 }
 
