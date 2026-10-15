@@ -215,8 +215,10 @@ const projectGalleries={
     ]
   },
   ses:{
-    category:'Projet scientifique',title:'Services écosystémiques et télédétection',tags:['Sentinel-2','Séries temporelles','Analyse spatiale'],slides:[
-      {src:'images/portfolio-gallery/ses-poster.webp',title:'Évaluation d’un service de régulation climatique',label:'Poster scientifique',description:'Ce poster synthétise une analyse menée à partir de séries temporelles Sentinel-2 dans deux territoires marocains. Les cartes et graphiques permettent de comparer la distribution spatiale de l’indicateur et son évolution entre 2017 et 2024.'}
+    category:'Projet scientifique',title:'Services écosystémiques et télédétection',tags:['Sentinel-2','Indicateurs environnementaux','Analyse spatiale'],slides:[
+      {src:'images/portfolio-gallery/ses-poster.webp',title:'Évaluation d’un service de régulation climatique',label:'Production 1 sur 3 — Poster scientifique',description:'Ce poster synthétise une analyse menée à partir de séries temporelles Sentinel-2 dans les provinces de Kénitra et Khémisset. Les cartes et graphiques permettent de comparer la distribution spatiale de l’indicateur composite et son évolution entre 2017 et 2024.'},
+      {src:'images/portfolio-gallery/Kenitra Khemisset IRES.png',title:'Indicateur du risque d’érosion des sols',label:'Production 2 sur 3 — Cartographie comparative',description:'Cette carte compare la répartition spatiale des niveaux de risque d’érosion des sols à Kénitra et Khémisset. Elle permet d’identifier les secteurs où le risque est faible ou élevé et d’observer les contrastes entre les deux territoires.'},
+      {src:'images/portfolio-gallery/Spatial Changes in Soil Erosion Risk in Kénitra and Khémisset (2017–2024).png',title:'Évolution du risque d’érosion des sols',label:'Production 3 sur 3 — Analyse diachronique',description:'Cette carte représente les changements spatiaux du risque d’érosion des sols entre 2017 et 2024. Elle met en évidence les secteurs où le risque s’est renforcé, ceux où il a diminué et les zones restées relativement stables.'}
     ]
   }
 };
@@ -241,9 +243,10 @@ projectGalleries['interactive-maps']={
   title:'Sélection de cartes interactives',
   tags:['Leaflet','Webmapping','Analyse spatiale'],
   slides:[
-    {iframe:'https://abdilabd.github.io/carte-douaisis-agglo/',url:'https://abdilabd.github.io/carte-douaisis-agglo/',title:'Réseau hydrographique — Douaisis Agglo',label:'Carte interactive 1 sur 3',description:'Cette carte interactive permet de structurer et de valoriser le réseau hydrographique afin de faciliter le suivi des tronçons et la préparation des interventions. Elle permet d’explorer 1 687 tronçons par commune, bassin versant, nature et largeur.'},
-    {iframe:'https://abdilabd.github.io/Digital-Soil-Mapping/',url:'https://abdilabd.github.io/Digital-Soil-Mapping/',title:'Cartographie numérique des sols — Oise',label:'Carte interactive 2 sur 3',description:'Cette carte interactive présente les résultats d’une cartographie numérique des sols produite à 30 m de résolution par Random Forest et krigeage. Elle permet d’explorer six propriétés — argile, sable, limon, pH, carbone organique et CEC — selon différentes profondeurs du sol.'},
-    {src:'images/image0.png',url:'https://abdilabd.github.io/Webmapping/',title:'Densité de population — Rouen',label:'Carte interactive 3 sur 3',description:'Cette carte permet d’explorer la répartition de la population et de faire ressortir les contrastes spatiaux à l’échelle du territoire rouennais.'}
+    {iframe:'https://abdilabd.github.io/carte-douaisis-agglo/',url:'https://abdilabd.github.io/carte-douaisis-agglo/',title:'Réseau hydrographique — Douaisis Agglo',label:'Carte interactive 1 sur 4',description:'Cette carte interactive permet de structurer et de valoriser le réseau hydrographique afin de faciliter le suivi des tronçons et la préparation des interventions. Elle permet d’explorer 1 687 tronçons par commune, bassin versant, nature et largeur.'},
+    {iframe:'https://abdilabd.github.io/Digital-Soil-Mapping/',url:'https://abdilabd.github.io/Digital-Soil-Mapping/',title:'Cartographie numérique des sols — Oise',label:'Carte interactive 2 sur 4',description:'Cette carte interactive présente les résultats d’une cartographie numérique des sols produite à 30 m de résolution par Random Forest et krigeage. Elle permet d’explorer six propriétés — argile, sable, limon, pH, carbone organique et CEC — selon différentes profondeurs du sol.'},
+    {src:'images/image0.png',url:'https://abdilabd.github.io/Webmapping/',title:'Densité de population — Rouen',label:'Carte interactive 3 sur 4',description:'Cette carte permet d’explorer la répartition de la population et de faire ressortir les contrastes spatiaux à l’échelle du territoire rouennais.'},
+    {iframe:'https://abdilabd.github.io/Djibouti-explore-map/',url:'https://abdilabd.github.io/Djibouti-explore-map/',title:'Explorer Djibouti — Lieux remarquables',label:'Carte interactive 4 sur 4',description:'Cette carte interactive invite à découvrir Djibouti à travers une sélection de lieux historiques, culturels et remarquables. Elle facilite leur localisation et propose une lecture géographique du patrimoine et des principaux sites du territoire.'}
   ]
 };
 
