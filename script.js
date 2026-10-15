@@ -51,7 +51,7 @@ if(experienceMap&&window.L){
     {
       name:'Djibouti',
       coordinates:[11.5721,43.1456],
-      experiences:['Développement et gestion SIG — DDCF','Géomaticien cartographe — ONEAD']
+      experiences:['Géomaticien — Analyste de données — ORREC / CERD','Développement et gestion SIG — DDCF','Géomaticien cartographe — ONEAD']
     }
   ];
   const map=L.map(experienceMap,{zoomControl:true,minZoom:3,maxZoom:6,scrollWheelZoom:false,worldCopyJump:false,attributionControl:true});
@@ -226,12 +226,12 @@ projectGalleries['static-maps']={
   title:'Sélection de cartes statiques',
   tags:['QGIS','ArcGIS Pro','Cartographie thématique'],
   slides:[
-    ...projectGalleries['study-areas'].slides,
-    ...projectGalleries['idf-demography'].slides,
-    ...projectGalleries.biowaste.slides,
     ...projectGalleries.normandy.slides,
+    ...projectGalleries.biowaste.slides,
+    ...projectGalleries['idf-demography'].slides,
     projectGalleries.flood.slides[0],
     ...projectGalleries.bordeaux.slides,
+    ...projectGalleries['study-areas'].slides,
     projectGalleries.ndvi.slides[1]
   ]
 };
