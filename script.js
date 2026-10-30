@@ -254,7 +254,11 @@ projectGalleries['animated-maps']={
   category:'GIF cartographiques',
   title:'Cartes animées',
   tags:['GIF','Animation','Analyse temporelle'],
-  slides:[projectGalleries.flood.slides[1],projectGalleries.ndvi.slides[0]]
+  slides:[
+    projectGalleries.flood.slides[1],
+    projectGalleries.ndvi.slides[0],
+    {src:'images/portfolio-gallery/IRES_Kenitra_Khemisset_2017_2024.GIF',title:'Risque d’érosion des sols — Kénitra et Khémisset',label:'Évolution annuelle · 2017–2024',description:'Cette animation cartographique montre l’évolution annuelle de l’indice de risque d’érosion des sols dans les provinces de Kénitra et Khémisset. Elle permet de suivre les variations spatiales du risque entre 2017 et 2024 et de repérer les secteurs où les niveaux faibles, modérés ou élevés se maintiennent ou évoluent.'}
+  ]
 };
 
 const galleryModal=document.querySelector('#gallery-modal');
